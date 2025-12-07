@@ -6,5 +6,4 @@ These Dense and Sparse embeddigns are generated using BGE-M3 specifically to sto
 
 This JSONL formatted dataset is hosted on Google Drive due to its large size. 
 
-[**https://drive.google.com/file/d/15V1y63PjJ6GkXxAKT4Q1OjSUQzhi9nji/view?usp=sharing**](YOUR_GOOGLE_DRIVE_SHARABLE_LINK_HERE)
-
+[**https://drive.google.com/drive/folders/1waYKN72ue1-ndwhf02nhV2e739F6XPux?usp=sharing**]
