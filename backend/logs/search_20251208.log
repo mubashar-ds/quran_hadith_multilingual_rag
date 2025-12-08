@@ -1,0 +1,187 @@
+2025-12-08 12:15:50 - quran_search - INFO - Qdrant service initialized: http://localhost:6333
+2025-12-08 12:16:04 - quran_search - INFO - Qdrant service initialized: http://localhost:6333
+2025-12-08 12:28:36 - quran_search - INFO - Qdrant service initialized: http://localhost:6333
+2025-12-08 12:38:38,055 - INFO - Qdrant initialized: http://localhost:6333
+2025-12-08 12:38:38,469 - INFO - Starting Quran Search API...
+2025-12-08 12:38:53,898 - INFO - Qdrant initialized: http://localhost:6333
+2025-12-08 12:38:54,047 - INFO - Starting Quran Search API...
+2025-12-08 12:39:35,608 - INFO - === SEARCH: نماز, top_k=3 ===
+2025-12-08 12:39:35,626 - INFO - Processing: نماز...
+2025-12-08 12:39:39,863 - INFO - Processed: نماز
+2025-12-08 12:39:41,925 - INFO - Searching Qdrant, top_k=3
+2025-12-08 12:39:54,971 - ERROR - Qdrant search error: timed out
+2025-12-08 12:39:54,971 - ERROR - Search error: timed out
+2025-12-08 12:39:58,271 - INFO - === SEARCH: نماز, top_k=3 ===
+2025-12-08 12:39:58,286 - INFO - Processing: نماز...
+2025-12-08 12:39:59,956 - INFO - Processed: نماز
+2025-12-08 12:40:01,891 - INFO - Searching Qdrant, top_k=3
+2025-12-08 12:40:03,109 - INFO - Found 3 results
+2025-12-08 12:40:03,109 - INFO - Getting texts for: [5896, 6116, 5971]
+2025-12-08 12:40:03,109 - INFO - Getting LLM explanation for: نماز
+2025-12-08 12:40:13,215 - INFO - Search successful. Found 3 verses
+2025-12-08 12:51:02,800 - INFO - Qdrant initialized: http://localhost:6333
+2025-12-08 12:51:03,404 - INFO - Starting Quran Search API...
+2025-12-08 12:51:11,254 - INFO - === SEARCH: نماز, top_k=3 ===
+2025-12-08 12:51:11,293 - INFO - Processing: نماز...
+2025-12-08 12:51:14,391 - INFO - Processed: نماز
+2025-12-08 12:51:15,862 - INFO - Searching Qdrant, top_k=3
+2025-12-08 12:51:15,919 - INFO - Found 3 results
+2025-12-08 12:51:15,919 - INFO - Getting texts for: [5896, 6116, 5971]
+2025-12-08 12:51:15,919 - INFO - Getting Urdu LLM explanation for query: نماز
+2025-12-08 12:51:19,252 - INFO - Search successful. Found 3 verses
+2025-12-08 14:59:02,832 - INFO - Qdrant initialized: http://localhost:6333
+2025-12-08 14:59:02,850 - INFO - Collection: quran_verses (Hybrid search enabled)
+2025-12-08 14:59:04,000 - INFO - Starting Quran Search API...
+2025-12-08 14:59:15,169 - INFO - Qdrant initialized: http://localhost:6333
+2025-12-08 14:59:15,169 - INFO - Collection: quran_verses (Hybrid search enabled)
+2025-12-08 14:59:15,353 - INFO - Starting Quran Search API...
+2025-12-08 14:59:38,005 - INFO - === HYBRID SEARCH: نماز, top_k=5 ===
+2025-12-08 14:59:38,052 - INFO - Processing: نماز...
+2025-12-08 14:59:47,139 - INFO - Processed: نماز
+2025-12-08 14:59:48,404 - INFO - Dense: 1024 dim, Sparse: 1 tokens
+2025-12-08 14:59:48,406 - INFO - Received embeddings - Dense: 1024 dim
+2025-12-08 14:59:48,406 - INFO - Sparse: 1 tokens
+2025-12-08 14:59:48,407 - INFO - 🔍 HYBRID search: dense=1024, sparse=1
+2025-12-08 14:59:48,407 - ERROR - Hybrid search error: 'QdrantClient' object has no attribute 'search'
+2025-12-08 14:59:48,407 - ERROR - Dense search error: 'QdrantClient' object has no attribute 'search'
+2025-12-08 14:59:48,408 - ERROR - Search error: 'QdrantClient' object has no attribute 'search'
+2025-12-08 15:00:00,969 - INFO - === HYBRID SEARCH: نماز, top_k=5 ===
+2025-12-08 15:00:01,034 - INFO - Processing: نماز...
+2025-12-08 15:00:02,909 - INFO - Processed: نماز
+2025-12-08 15:00:04,055 - INFO - Dense: 1024 dim, Sparse: 1 tokens
+2025-12-08 15:00:04,056 - INFO - Received embeddings - Dense: 1024 dim
+2025-12-08 15:00:04,057 - INFO - Sparse: 1 tokens
+2025-12-08 15:00:04,058 - INFO - 🔍 HYBRID search: dense=1024, sparse=1
+2025-12-08 15:00:04,059 - ERROR - Hybrid search error: 'QdrantClient' object has no attribute 'search'
+2025-12-08 15:00:04,059 - ERROR - Dense search error: 'QdrantClient' object has no attribute 'search'
+2025-12-08 15:00:04,059 - ERROR - Search error: 'QdrantClient' object has no attribute 'search'
+2025-12-08 15:02:10,928 - INFO - Qdrant initialized: http://localhost:6333
+2025-12-08 15:02:10,929 - INFO - Collection: quran_verses (Hybrid search enabled)
+2025-12-08 15:02:11,118 - INFO - Starting Quran Search API...
+2025-12-08 15:02:22,521 - INFO - === HYBRID SEARCH: نماز, top_k=5 ===
+2025-12-08 15:02:22,573 - INFO - Processing: نماز...
+2025-12-08 15:02:24,194 - INFO - Processed: نماز
+2025-12-08 15:02:25,175 - INFO - Dense: 1024 dim, Sparse: 1 tokens
+2025-12-08 15:02:25,176 - INFO - Received embeddings - Dense: 1024 dim
+2025-12-08 15:02:25,176 - INFO - Sparse: 1 tokens
+2025-12-08 15:02:25,177 - INFO - 🔍 HYBRID search: dense=1024, sparse=1
+2025-12-08 15:02:25,177 - ERROR - Hybrid search error: Unknown arguments: ['sparse']
+2025-12-08 15:02:25,908 - ERROR - Dense search error: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Wrong input: Not existing vector name error: "},"time":0.243636536}'
+2025-12-08 15:02:25,908 - ERROR - Search error: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Wrong input: Not existing vector name error: "},"time":0.243636536}'
+2025-12-08 15:03:45,581 - INFO - Qdrant initialized: http://localhost:6333
+2025-12-08 15:03:45,581 - INFO - Collection: quran_verses (Hybrid search enabled)
+2025-12-08 15:03:45,761 - INFO - Starting Quran Search API...
+2025-12-08 15:03:51,853 - INFO - === HYBRID SEARCH: نماز, top_k=5 ===
+2025-12-08 15:03:51,904 - INFO - Processing: نماز...
+2025-12-08 15:03:53,424 - INFO - Processed: نماز
+2025-12-08 15:03:54,409 - INFO - Dense: 1024 dim, Sparse: 1 tokens
+2025-12-08 15:03:54,411 - INFO - Received embeddings - Dense: 1024 dim
+2025-12-08 15:03:54,411 - INFO - Sparse: 1 tokens
+2025-12-08 15:03:54,411 - INFO - 🔍 HYBRID search: dense=1024, sparse=1
+2025-12-08 15:03:54,412 - ERROR - Hybrid search error: Unknown arguments: ['sparse']
+2025-12-08 15:03:54,497 - ERROR - Dense search error: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Wrong input: Not existing vector name error: "},"time":0.000928201}'
+2025-12-08 15:03:54,498 - ERROR - Search error: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Wrong input: Not existing vector name error: "},"time":0.000928201}'
+2025-12-08 15:06:01,776 - INFO - Qdrant initialized: http://localhost:6333
+2025-12-08 15:06:01,776 - INFO - Collection: quran_verses (Hybrid search enabled)
+2025-12-08 15:06:01,956 - INFO - Starting Quran Search API...
+2025-12-08 15:06:10,919 - INFO - === HYBRID SEARCH: نماز, top_k=5 ===
+2025-12-08 15:06:10,970 - INFO - Processing: نماز...
+2025-12-08 15:06:13,067 - INFO - Processed: نماز
+2025-12-08 15:06:14,313 - INFO - Dense: 1024 dim, Sparse: 1 tokens
+2025-12-08 15:06:14,314 - INFO - Received embeddings - Dense: 1024 dim
+2025-12-08 15:06:14,315 - INFO - Sparse: 1 tokens
+2025-12-08 15:06:14,315 - INFO - 🔍 HYBRID search: dense=1024, sparse=1
+2025-12-08 15:06:14,316 - ERROR - Hybrid search error: Unknown arguments: ['sparse']
+2025-12-08 15:06:14,335 - ERROR - Dense search error: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Wrong input: Not existing vector name error: "},"time":0.001005454}'
+2025-12-08 15:06:14,336 - ERROR - Search error: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Wrong input: Not existing vector name error: "},"time":0.001005454}'
+2025-12-08 15:09:02,044 - INFO - Qdrant initialized: http://localhost:6333
+2025-12-08 15:09:02,044 - INFO - Collection: quran_verses
+2025-12-08 15:09:02,248 - INFO - Starting Quran Search API...
+2025-12-08 15:09:07,599 - INFO - === HYBRID SEARCH: نماز, top_k=5 ===
+2025-12-08 15:09:07,656 - INFO - Processing: نماز...
+2025-12-08 15:09:09,205 - INFO - Processed: نماز
+2025-12-08 15:09:10,161 - INFO - Dense: 1024 dim, Sparse: 1 tokens
+2025-12-08 15:09:10,161 - INFO - Received embeddings - Dense: 1024 dim
+2025-12-08 15:09:10,162 - INFO - Sparse: 1 tokens
+2025-12-08 15:09:10,162 - INFO - 🔍 HYBRID search: dense=1024, sparse=1
+2025-12-08 15:09:10,163 - ERROR - Hybrid search error: 1 validation error for SearchRequest
+sparse_vector
+  Extra inputs are not permitted [type=extra_forbidden, input_value=SparseVector(indices=[319...es=[0.3428443670272827]), input_type=SparseVector]
+    For further information visit https://errors.pydantic.dev/2.12/v/extra_forbidden
+2025-12-08 15:09:10,186 - ERROR - Dense search error: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Wrong input: Not existing vector name error: "},"time":0.001660375}'
+2025-12-08 15:09:10,187 - ERROR - Search error: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Wrong input: Not existing vector name error: "},"time":0.001660375}'
+2025-12-08 15:12:05,680 - INFO - Qdrant initialized: http://localhost:6333
+2025-12-08 15:12:05,680 - INFO - Collection: quran_verses (Vector name: 'dense')
+2025-12-08 15:12:05,908 - INFO - Starting Quran Search API...
+2025-12-08 15:12:13,005 - INFO - === HYBRID SEARCH: نماز, top_k=5 ===
+2025-12-08 15:12:13,056 - INFO - Processing: نماز...
+2025-12-08 15:12:14,706 - INFO - Processed: نماز
+2025-12-08 15:12:15,669 - INFO - Dense: 1024 dim, Sparse: 1 tokens
+2025-12-08 15:12:15,670 - INFO - Received embeddings - Dense: 1024 dim
+2025-12-08 15:12:15,670 - INFO - Sparse: 1 tokens
+2025-12-08 15:12:15,670 - INFO - 🔍 HYBRID search: dense=1024, sparse=1
+2025-12-08 15:12:15,671 - ERROR - Hybrid search error: Unknown arguments: ['query_vector', 'vector_name', 'sparse']
+2025-12-08 15:12:15,671 - ERROR - Dense search error: Unknown arguments: ['query_vector', 'vector_name']
+2025-12-08 15:12:15,672 - ERROR - Search error: Unknown arguments: ['query_vector', 'vector_name']
+2025-12-08 15:14:02,364 - INFO - Qdrant initialized: http://localhost:6333
+2025-12-08 15:14:02,364 - INFO - Collection: quran_verses
+2025-12-08 15:14:02,561 - INFO - Starting Quran Search API...
+2025-12-08 15:14:08,357 - INFO - === HYBRID SEARCH: نماز, top_k=5 ===
+2025-12-08 15:14:08,406 - INFO - Processing: نماز...
+2025-12-08 15:14:10,614 - INFO - Processed: نماز
+2025-12-08 15:14:11,725 - INFO - Dense: 1024 dim, Sparse: 1 tokens
+2025-12-08 15:14:11,726 - INFO - Received embeddings - Dense: 1024 dim
+2025-12-08 15:14:11,727 - INFO - Sparse: 1 tokens
+2025-12-08 15:14:11,727 - INFO - 🔍 HYBRID search: dense=1024, sparse=1
+2025-12-08 15:14:11,727 - ERROR - Hybrid search error: Cannot instantiate typing.Union
+2025-12-08 15:14:11,728 - ERROR - Simple search error: 'QdrantClient' object has no attribute 'search'
+2025-12-08 15:14:11,728 - ERROR - Search error: 'QdrantClient' object has no attribute 'search'
+2025-12-08 15:17:28,627 - INFO - Qdrant initialized: http://localhost:6333
+2025-12-08 15:17:28,655 - INFO - Collection: quran_verses
+2025-12-08 15:17:29,632 - INFO - Starting Quran Search API...
+2025-12-08 15:17:54,326 - INFO - === HYBRID SEARCH: نماز, top_k=5 ===
+2025-12-08 15:17:54,412 - INFO - Processing: نماز...
+2025-12-08 15:17:56,217 - INFO - Processed: نماز
+2025-12-08 15:17:57,384 - INFO - Dense: 1024 dim, Sparse: 1 tokens
+2025-12-08 15:17:57,385 - INFO - Received embeddings - Dense: 1024 dim
+2025-12-08 15:17:57,385 - INFO - Sparse: 1 tokens
+2025-12-08 15:17:57,385 - INFO - 🔍 HYBRID search: dense=1024, sparse=1
+2025-12-08 15:17:57,386 - ERROR - Search error: 1 validation error for SearchRequest
+sparse_vector
+  Extra inputs are not permitted [type=extra_forbidden, input_value={'indices': [31933], 'val...': [0.3428443670272827]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/extra_forbidden
+2025-12-08 15:17:57,387 - ERROR - Simple search error: 'SyncPointsApi' object has no attribute 'search_points'
+2025-12-08 15:17:57,387 - ERROR - Search error: 'SyncPointsApi' object has no attribute 'search_points'
+2025-12-08 15:19:04,961 - INFO - Qdrant initialized: http://localhost:6333
+2025-12-08 15:19:04,961 - INFO - Collection: quran_verses
+2025-12-08 15:19:05,242 - INFO - Starting Quran Search API...
+2025-12-08 15:19:10,586 - INFO - === HYBRID SEARCH: نماز, top_k=5 ===
+2025-12-08 15:19:10,656 - INFO - Processing: نماز...
+2025-12-08 15:19:12,216 - INFO - Processed: نماز
+2025-12-08 15:19:13,217 - INFO - Dense: 1024 dim, Sparse: 1 tokens
+2025-12-08 15:19:13,218 - INFO - Received embeddings - Dense: 1024 dim
+2025-12-08 15:19:13,218 - INFO - Sparse: 1 tokens
+2025-12-08 15:19:13,218 - INFO - 🔍 Search: dense=1024, sparse=1
+2025-12-08 15:19:13,218 - ERROR - Search error: 'QdrantClient' object has no attribute 'search'
+2025-12-08 15:19:13,225 - ERROR - Query points also failed: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Wrong input: Not existing vector name error: "},"time":0.000901238}'
+2025-12-08 15:19:13,225 - ERROR - Search error: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Wrong input: Not existing vector name error: "},"time":0.000901238}'

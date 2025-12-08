@@ -1,0 +1,1478 @@
+2025-12-08 20:21:17 - QuranSearch - INFO - Logger initialized
+2025-12-08 20:21:22 - QuranSearch - INFO - ✅ Hybrid Qdrant initialized
+2025-12-08 20:21:22 - QuranSearch - INFO -   Dense: quran_dense
+2025-12-08 20:21:22 - QuranSearch - INFO -   Sparse: quran_sparse
+2025-12-08 20:21:22 - QuranSearch - INFO - ✓ quran_dense: 6236 points
+2025-12-08 20:21:22 - QuranSearch - INFO - ✓ quran_sparse: 6236 points
+2025-12-08 20:21:24 - QuranSearch - INFO - Starting server on http://0.0.0.0:8000
+2025-12-08 20:21:24 - QuranSearch - INFO - 🚀 Quran Search API Starting...
+2025-12-08 20:21:24 - QuranSearch - INFO - ✅ Hybrid Search Enabled
+2025-12-08 20:21:24 - QuranSearch - INFO - ✅ LLM Explanations Enabled
+2025-12-08 20:21:24 - QuranSearch - INFO - ✅ PostgreSQL Integration Ready
+2025-12-08 20:21:36 - QuranSearch - INFO - 🔍 HYBRID SEARCH: 'نماز کی اہمیت', top_k=3
+2025-12-08 20:21:36 - QuranSearch - INFO - Step 1: Getting embeddings...
+2025-12-08 20:21:36 - QuranSearch - INFO - Getting embeddings for: 'نماز کی اہمیت'
+2025-12-08 20:21:40 - QuranSearch - INFO - ✅ Embeddings received from Colab
+2025-12-08 20:21:40 - QuranSearch - INFO - Dense: 0 dim
+2025-12-08 20:21:40 - QuranSearch - INFO - Sparse: 0 indices
+2025-12-08 20:21:40 - QuranSearch - INFO - Step 2: Hybrid search in Qdrant...
+2025-12-08 20:21:40 - QuranSearch - INFO - 🔍 Hybrid search: dense=0 dim, sparse=0 indices
+2025-12-08 20:21:40 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 20:21:40 - QuranSearch - ERROR - Hybrid search error: 'QdrantClient' object has no attribute 'search'
+2025-12-08 20:21:40 - QuranSearch - ERROR - Search error: 'QdrantClient' object has no attribute 'search'
+2025-12-08 20:25:06 - QuranSearch - INFO - Logger initialized
+2025-12-08 20:25:10 - QuranSearch - INFO - ✅ Hybrid Qdrant initialized
+2025-12-08 20:25:10 - QuranSearch - INFO -   Dense: quran_dense
+2025-12-08 20:25:10 - QuranSearch - INFO -   Sparse: quran_sparse
+2025-12-08 20:25:10 - QuranSearch - INFO - ✓ quran_dense: 6236 points
+2025-12-08 20:25:10 - QuranSearch - INFO - ✓ quran_sparse: 6236 points
+2025-12-08 20:25:12 - QuranSearch - INFO - Starting server on http://0.0.0.0:8000
+2025-12-08 20:25:12 - QuranSearch - INFO - 🚀 Quran Search API Starting...
+2025-12-08 20:25:12 - QuranSearch - INFO - ✅ Hybrid Search Enabled
+2025-12-08 20:25:12 - QuranSearch - INFO - ✅ LLM Explanations Enabled
+2025-12-08 20:25:12 - QuranSearch - INFO - ✅ PostgreSQL Integration Ready
+2025-12-08 20:25:18 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 20:25:18 - QuranSearch - INFO -   Query: 'نماز کی اہمیت'
+2025-12-08 20:25:18 - QuranSearch - INFO -   Top K: 3
+2025-12-08 20:25:18 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 20:25:18 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 20:25:18 - QuranSearch - INFO - Query: 'نماز کی اہمیت'
+2025-12-08 20:25:25 - QuranSearch - INFO - Colab response status: 200
+2025-12-08 20:25:25 - QuranSearch - INFO - ✅ Colab API successful
+2025-12-08 20:25:25 - QuranSearch - INFO - Response keys: ['text', 'embeddings']
+2025-12-08 20:25:25 - QuranSearch - WARNING - Dense vector length is 0 (expected 1024)
+2025-12-08 20:25:25 - QuranSearch - INFO - Dense vector: 0 dim
+2025-12-08 20:25:25 - QuranSearch - INFO - Sparse indices: 0
+2025-12-08 20:25:25 - QuranSearch - INFO - Sparse values: 0
+2025-12-08 20:25:25 - QuranSearch - INFO - Processed text: 'نماز کی اہمیت'
+2025-12-08 20:25:25 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 20:25:25 - QuranSearch - INFO - 🔍 Hybrid search: dense=0 dim, sparse=0 indices
+2025-12-08 20:25:25 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 20:25:25 - QuranSearch - ERROR - Dense search error: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Wrong input: Vector dimension error: expected dim: 1024, got 0"},"time":0.001373393}'
+2025-12-08 20:25:25 - QuranSearch - ERROR - Hybrid search error: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Wrong input: Vector dimension error: expected dim: 1024, got 0"},"time":0.001373393}'
+2025-12-08 20:25:25 - QuranSearch - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/abdul/islamic_search/Quran_Clone_data/Quran_Hadit_Retrieval/backend/services/qdrant_service.py", line 42, in hybrid_search
+    dense_results = self._search_dense(dense_vector, top_k * 2)
+  File "/home/abdul/islamic_search/Quran_Clone_data/Quran_Hadit_Retrieval/backend/services/qdrant_service.py", line 72, in _search_dense
+    search_result = self.client.query_points(
+        collection_name=self.dense_collection,
+    ...<2 lines>...
+        with_payload=True
+    )
+  File "/home/abdul/islamic_search/venv/lib/python3.13/site-packages/qdrant_client/qdrant_client.py", line 429, in query_points
+    return self._client.query_points(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        collection_name=collection_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<14 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/abdul/islamic_search/venv/lib/python3.13/site-packages/qdrant_client/qdrant_remote.py", line 544, in query_points
+    query_result = self.http.search_api.query_points(
+        collection_name=collection_name,
+    ...<2 lines>...
+        query_request=query_request,
+    )
+  File "/home/abdul/islamic_search/venv/lib/python3.13/site-packages/qdrant_client/http/api/search_api.py", line 783, in query_points
+    return self._build_for_query_points(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        collection_name=collection_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        query_request=query_request,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/abdul/islamic_search/venv/lib/python3.13/site-packages/qdrant_client/http/api/search_api.py", line 181, in _build_for_query_points
+    return self.api_client.request(
+           ~~~~~~~~~~~~~~~~~~~~~~~^
+        type_=m.InlineResponse20021,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        content=body,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/abdul/islamic_search/venv/lib/python3.13/site-packages/qdrant_client/http/api_client.py", line 95, in request
+    return self.send(request, type_)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/abdul/islamic_search/venv/lib/python3.13/site-packages/qdrant_client/http/api_client.py", line 130, in send
+    raise UnexpectedResponse.for_response(response)
+qdrant_client.http.exceptions.UnexpectedResponse: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Wrong input: Vector dimension error: expected dim: 1024, got 0"},"time":0.001373393}'
+
+2025-12-08 20:25:25 - QuranSearch - INFO - Trying dense-only fallback...
+2025-12-08 20:25:25 - QuranSearch - ERROR - Dense search error: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Wrong input: Vector dimension error: expected dim: 1024, got 0"},"time":0.001147167}'
+2025-12-08 20:25:25 - QuranSearch - ERROR - Dense fallback also failed: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Wrong input: Vector dimension error: expected dim: 1024, got 0"},"time":0.001147167}'
+2025-12-08 20:25:25 - QuranSearch - ERROR - ❌ Qdrant search failed: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Wrong input: Vector dimension error: expected dim: 1024, got 0"},"time":0.001147167}'
+2025-12-08 20:25:25 - QuranSearch - ERROR - HTTP Exception: Qdrant search failed: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Wrong input: Vector dimension error: expected dim: 1024, got 0"},"time":0.001147167}'
+2025-12-08 20:28:10 - QuranSearch - INFO - Logger initialized
+2025-12-08 20:28:11 - QuranSearch - INFO - ✅ Hybrid Qdrant initialized
+2025-12-08 20:28:11 - QuranSearch - INFO -   Dense: quran_dense
+2025-12-08 20:28:11 - QuranSearch - INFO -   Sparse: quran_sparse
+2025-12-08 20:28:11 - QuranSearch - INFO - ✓ quran_dense: 6236 points
+2025-12-08 20:28:11 - QuranSearch - INFO - ✓ quran_sparse: 6236 points
+2025-12-08 20:28:12 - QuranSearch - INFO - Starting server on http://0.0.0.0:8000
+2025-12-08 20:28:12 - QuranSearch - INFO - 🚀 Quran Search API Starting...
+2025-12-08 20:28:12 - QuranSearch - INFO - ✅ Hybrid Search Enabled
+2025-12-08 20:28:12 - QuranSearch - INFO - ✅ LLM Explanations Enabled
+2025-12-08 20:28:12 - QuranSearch - INFO - ✅ PostgreSQL Integration Ready
+2025-12-08 20:28:24 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 20:28:24 - QuranSearch - INFO -   Query: 'نماز کی اہمیت'
+2025-12-08 20:28:24 - QuranSearch - INFO -   Top K: 3
+2025-12-08 20:28:24 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 20:28:24 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 20:28:24 - QuranSearch - INFO - Query: 'نماز کی اہمیت'
+2025-12-08 20:28:31 - QuranSearch - INFO - Colab response status: 200
+2025-12-08 20:28:31 - QuranSearch - INFO - ✅ Colab API successful
+2025-12-08 20:28:31 - QuranSearch - INFO - Embeddings keys: ['dense_vector', 'dense_length', 'sparse_indices', 'sparse_values', 'sparse_pairs']
+2025-12-08 20:28:31 - QuranSearch - INFO - ✅ Dense vector: 1024 dim
+2025-12-08 20:28:31 - QuranSearch - INFO - ✅ Sparse indices: 0
+2025-12-08 20:28:31 - QuranSearch - INFO - ✅ Sparse values: 0
+2025-12-08 20:28:31 - QuranSearch - INFO - ✅ Processed text: 'نماز کی اہمیت'
+2025-12-08 20:28:31 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 20:28:31 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=0 indices
+2025-12-08 20:28:31 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 20:28:33 - QuranSearch - INFO - Dense search returned 6 points
+2025-12-08 20:28:33 - QuranSearch - INFO - ✅ Found 3 combined results
+2025-12-08 20:28:33 - QuranSearch - INFO - ✅ Qdrant search successful, got 3 hits
+2025-12-08 20:28:33 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 20:28:33 - QuranSearch - INFO -   Verse 1: ID=3486, Quran_ID=3486
+2025-12-08 20:28:33 - QuranSearch - INFO -   Verse 2: ID=3385, Quran_ID=3385
+2025-12-08 20:28:33 - QuranSearch - INFO -   Verse 3: ID=4269, Quran_ID=4269
+2025-12-08 20:28:33 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 20:28:33 - QuranSearch - INFO - Fetching 3 verses from PostgreSQL
+2025-12-08 20:28:35 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 20:28:35 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 20:28:35 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 20:28:35 - QuranSearch - INFO -   Formatted result 1: Surah 31:17
+2025-12-08 20:28:35 - QuranSearch - INFO -   Formatted result 2: Surah 29:45
+2025-12-08 20:28:35 - QuranSearch - INFO -   Formatted result 3: Surah 41:51
+2025-12-08 20:28:35 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 20:28:35 - QuranSearch - INFO - Getting LLM explanation for 3 verses
+2025-12-08 20:28:36 - QuranSearch - ERROR - LLM error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 20:28:36 - QuranSearch - INFO - ✅ LLM explanation generated (87 chars)
+2025-12-08 20:28:36 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 3 verses
+2025-12-08 20:34:30 - QuranSearch - INFO - Logger initialized
+2025-12-08 20:34:32 - QuranSearch - INFO - ✅ Hybrid Qdrant initialized
+2025-12-08 20:34:32 - QuranSearch - INFO -   Dense: quran_dense
+2025-12-08 20:34:32 - QuranSearch - INFO -   Sparse: quran_sparse
+2025-12-08 20:34:32 - QuranSearch - INFO - ✓ quran_dense: 6236 points
+2025-12-08 20:34:32 - QuranSearch - INFO - ✓ quran_sparse: 6236 points
+2025-12-08 20:34:32 - QuranSearch - INFO - Starting server on http://0.0.0.0:8000
+2025-12-08 20:34:32 - QuranSearch - INFO - 🚀 Quran Search API Starting...
+2025-12-08 20:34:32 - QuranSearch - INFO - ✅ Hybrid Search Enabled
+2025-12-08 20:34:32 - QuranSearch - INFO - ✅ LLM Explanations Enabled
+2025-12-08 20:34:32 - QuranSearch - INFO - ✅ PostgreSQL Integration Ready
+2025-12-08 20:34:40 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 20:34:40 - QuranSearch - INFO -   Query: 'نماز کی اہمیت'
+2025-12-08 20:34:40 - QuranSearch - INFO -   Top K: 3
+2025-12-08 20:34:40 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 20:34:40 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 20:34:40 - QuranSearch - INFO - Query: 'نماز کی اہمیت'
+2025-12-08 20:34:43 - QuranSearch - INFO - Colab response status: 200
+2025-12-08 20:34:43 - QuranSearch - INFO - ✅ Colab API successful
+2025-12-08 20:34:43 - QuranSearch - INFO - Embeddings keys: ['dense_vector', 'dense_length', 'sparse_indices', 'sparse_values', 'sparse_pairs']
+2025-12-08 20:34:43 - QuranSearch - INFO - ✅ Dense vector: 1024 dim
+2025-12-08 20:34:43 - QuranSearch - INFO - ✅ Sparse indices: 0
+2025-12-08 20:34:43 - QuranSearch - INFO - ✅ Sparse values: 0
+2025-12-08 20:34:43 - QuranSearch - INFO - ✅ Processed text: 'نماز کی اہمیت'
+2025-12-08 20:34:43 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 20:34:43 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=0 indices
+2025-12-08 20:34:43 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 20:34:44 - QuranSearch - INFO - Dense search returned 6 points
+2025-12-08 20:34:44 - QuranSearch - INFO - ✅ Found 3 combined results
+2025-12-08 20:34:44 - QuranSearch - INFO - ✅ Qdrant search successful, got 3 hits
+2025-12-08 20:34:44 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 20:34:44 - QuranSearch - INFO -   Verse 1: ID=3486, Quran_ID=3486
+2025-12-08 20:34:44 - QuranSearch - INFO -   Verse 2: ID=3385, Quran_ID=3385
+2025-12-08 20:34:44 - QuranSearch - INFO -   Verse 3: ID=4269, Quran_ID=4269
+2025-12-08 20:34:44 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 20:34:44 - QuranSearch - INFO - Fetching 3 verses from PostgreSQL
+2025-12-08 20:34:45 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 20:34:45 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 20:34:45 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 20:34:45 - QuranSearch - INFO -   Formatted result 1: Surah 31:17
+2025-12-08 20:34:45 - QuranSearch - INFO -   Formatted result 2: Surah 29:45
+2025-12-08 20:34:45 - QuranSearch - INFO -   Formatted result 3: Surah 41:51
+2025-12-08 20:34:45 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 20:34:45 - QuranSearch - INFO - 🤖 Getting detailed LLM explanation for 3 verses
+2025-12-08 20:34:45 - QuranSearch - INFO - 📝 Sending prompt to LLM (mistralai/Mistral-7B-Instruct-v0.1)...
+2025-12-08 20:34:51 - QuranSearch - ERROR - LLM attempt 1 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 20:34:55 - QuranSearch - ERROR - LLM attempt 2 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 20:34:58 - QuranSearch - ERROR - LLM attempt 3 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 20:34:58 - QuranSearch - ERROR - 🤖 LLM service error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 20:34:58 - QuranSearch - INFO - 📝 Using detailed fallback explanation
+2025-12-08 20:34:58 - QuranSearch - INFO - ✅ LLM explanation generated (1277 chars)
+2025-12-08 20:34:58 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 3 verses
+2025-12-08 20:35:20 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 20:35:20 - QuranSearch - INFO -   Query: 'نماز کی اہمیت'
+2025-12-08 20:35:20 - QuranSearch - INFO -   Top K: 3
+2025-12-08 20:35:20 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 20:35:20 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 20:35:20 - QuranSearch - INFO - Query: 'نماز کی اہمیت'
+2025-12-08 20:35:28 - QuranSearch - INFO - Colab response status: 200
+2025-12-08 20:35:28 - QuranSearch - INFO - ✅ Colab API successful
+2025-12-08 20:35:28 - QuranSearch - INFO - Embeddings keys: ['dense_vector', 'dense_length', 'sparse_indices', 'sparse_values', 'sparse_pairs']
+2025-12-08 20:35:28 - QuranSearch - INFO - ✅ Dense vector: 1024 dim
+2025-12-08 20:35:28 - QuranSearch - INFO - ✅ Sparse indices: 0
+2025-12-08 20:35:28 - QuranSearch - INFO - ✅ Sparse values: 0
+2025-12-08 20:35:28 - QuranSearch - INFO - ✅ Processed text: 'نماز کی اہمیت'
+2025-12-08 20:35:28 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 20:35:28 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=0 indices
+2025-12-08 20:35:28 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 20:35:28 - QuranSearch - INFO - Dense search returned 6 points
+2025-12-08 20:35:28 - QuranSearch - INFO - ✅ Found 3 combined results
+2025-12-08 20:35:28 - QuranSearch - INFO - ✅ Qdrant search successful, got 3 hits
+2025-12-08 20:35:28 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 20:35:28 - QuranSearch - INFO -   Verse 1: ID=3486, Quran_ID=3486
+2025-12-08 20:35:28 - QuranSearch - INFO -   Verse 2: ID=3385, Quran_ID=3385
+2025-12-08 20:35:28 - QuranSearch - INFO -   Verse 3: ID=4269, Quran_ID=4269
+2025-12-08 20:35:28 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 20:35:28 - QuranSearch - INFO - Fetching 3 verses from PostgreSQL
+2025-12-08 20:35:28 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 20:35:28 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 20:35:28 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 20:35:28 - QuranSearch - INFO -   Formatted result 1: Surah 31:17
+2025-12-08 20:35:28 - QuranSearch - INFO -   Formatted result 2: Surah 29:45
+2025-12-08 20:35:28 - QuranSearch - INFO -   Formatted result 3: Surah 41:51
+2025-12-08 20:35:28 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 20:35:28 - QuranSearch - INFO - 🤖 Getting detailed LLM explanation for 3 verses
+2025-12-08 20:35:28 - QuranSearch - INFO - 📝 Sending prompt to LLM (mistralai/Mistral-7B-Instruct-v0.1)...
+2025-12-08 20:35:29 - QuranSearch - ERROR - LLM attempt 1 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 20:35:32 - QuranSearch - ERROR - LLM attempt 2 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 20:35:36 - QuranSearch - ERROR - LLM attempt 3 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 20:35:36 - QuranSearch - ERROR - 🤖 LLM service error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 20:35:36 - QuranSearch - INFO - 📝 Using detailed fallback explanation
+2025-12-08 20:35:36 - QuranSearch - INFO - ✅ LLM explanation generated (1277 chars)
+2025-12-08 20:35:36 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 3 verses
+2025-12-08 21:24:27 - QuranSearch - INFO - Logger initialized
+2025-12-08 21:24:28 - QuranSearch - INFO - ✅ Hybrid Qdrant initialized
+2025-12-08 21:24:28 - QuranSearch - INFO -   Dense: quran_dense
+2025-12-08 21:24:28 - QuranSearch - INFO -   Sparse: quran_sparse
+2025-12-08 21:24:28 - QuranSearch - INFO - ✓ quran_dense: 6236 points
+2025-12-08 21:24:28 - QuranSearch - INFO - ✓ quran_sparse: 6236 points
+2025-12-08 21:24:28 - QuranSearch - INFO - Starting server on http://0.0.0.0:8000
+2025-12-08 21:24:28 - QuranSearch - INFO - 🚀 Quran Search API Starting...
+2025-12-08 21:24:28 - QuranSearch - INFO - ✅ Hybrid Search Enabled
+2025-12-08 21:24:28 - QuranSearch - INFO - ✅ LLM Explanations Enabled
+2025-12-08 21:24:28 - QuranSearch - INFO - ✅ PostgreSQL Integration Ready
+2025-12-08 21:24:57 - QuranSearch - INFO - Logger initialized
+2025-12-08 21:24:58 - QuranSearch - INFO - ✅ Hybrid Qdrant initialized
+2025-12-08 21:24:58 - QuranSearch - INFO -   Dense: quran_dense
+2025-12-08 21:24:58 - QuranSearch - INFO -   Sparse: quran_sparse
+2025-12-08 21:24:58 - QuranSearch - INFO - ✓ quran_dense: 6236 points
+2025-12-08 21:24:58 - QuranSearch - INFO - ✓ quran_sparse: 6236 points
+2025-12-08 21:24:58 - QuranSearch - INFO - Starting server on http://0.0.0.0:8001
+2025-12-08 21:24:58 - QuranSearch - INFO - 🚀 Quran Search API Starting...
+2025-12-08 21:24:58 - QuranSearch - INFO - ✅ Hybrid Search Enabled
+2025-12-08 21:24:58 - QuranSearch - INFO - ✅ LLM Explanations Enabled
+2025-12-08 21:24:58 - QuranSearch - INFO - ✅ PostgreSQL Integration Ready
+2025-12-08 21:27:46 - QuranSearch - INFO - Logger initialized
+2025-12-08 21:27:47 - QuranSearch - INFO - ✅ Hybrid Qdrant initialized
+2025-12-08 21:27:47 - QuranSearch - INFO -   Dense: quran_dense
+2025-12-08 21:27:47 - QuranSearch - INFO -   Sparse: quran_sparse
+2025-12-08 21:27:47 - QuranSearch - INFO - ✓ quran_dense: 6236 points
+2025-12-08 21:27:47 - QuranSearch - INFO - ✓ quran_sparse: 6236 points
+2025-12-08 21:27:48 - QuranSearch - INFO - Starting server on http://0.0.0.0:8000
+2025-12-08 21:27:48 - QuranSearch - INFO - 🚀 Quran Search API Starting...
+2025-12-08 21:27:48 - QuranSearch - INFO - ✅ Hybrid Search Enabled
+2025-12-08 21:27:48 - QuranSearch - INFO - ✅ LLM Explanations Enabled
+2025-12-08 21:27:48 - QuranSearch - INFO - ✅ PostgreSQL Integration Ready
+2025-12-08 21:30:19 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 21:30:19 - QuranSearch - INFO -   Query: 'نماز کی اہمیت'
+2025-12-08 21:30:19 - QuranSearch - INFO -   Top K: 3
+2025-12-08 21:30:19 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 21:30:19 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 21:30:19 - QuranSearch - INFO - Query: 'نماز کی اہمیت'
+2025-12-08 21:30:19 - QuranSearch - INFO - Colab response status: 404
+2025-12-08 21:30:19 - QuranSearch - ERROR - Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 21:30:19 - QuranSearch - ERROR - 🚨 Embedding service error: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 21:30:19 - QuranSearch - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/abdul/islamic_search/Quran_Clone_data/Quran_Hadit_Retrieval/backend/services/embedding_service.py", line 93, in get_embeddings_from_colab
+    raise Exception(error_msg)
+Exception: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+
+2025-12-08 21:30:19 - QuranSearch - INFO - Using fallback dummy embeddings
+2025-12-08 21:30:19 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 21:30:19 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=5 indices
+2025-12-08 21:30:19 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 21:30:21 - QuranSearch - INFO - Dense search returned 6 points
+2025-12-08 21:30:21 - QuranSearch - INFO - Searching sparse collection...
+2025-12-08 21:30:21 - QuranSearch - WARNING - Sparse search failed: Unsupported query type: <class 'dict'>
+2025-12-08 21:30:21 - QuranSearch - INFO - ✅ Found 3 combined results
+2025-12-08 21:30:21 - QuranSearch - INFO - ✅ Qdrant search successful, got 3 hits
+2025-12-08 21:30:21 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 21:30:21 - QuranSearch - INFO -   Verse 1: ID=3762, Quran_ID=3762
+2025-12-08 21:30:21 - QuranSearch - INFO -   Verse 2: ID=2583, Quran_ID=2583
+2025-12-08 21:30:21 - QuranSearch - INFO -   Verse 3: ID=273, Quran_ID=273
+2025-12-08 21:30:21 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 21:30:21 - QuranSearch - INFO - Fetching 3 verses from PostgreSQL
+2025-12-08 21:30:22 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 21:30:22 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 21:30:22 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 21:30:22 - QuranSearch - INFO -   Formatted result 1: Surah 36:57
+2025-12-08 21:30:22 - QuranSearch - INFO -   Formatted result 2: Surah 21:100
+2025-12-08 21:30:22 - QuranSearch - INFO -   Formatted result 3: Surah 2:266
+2025-12-08 21:30:22 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 21:30:22 - QuranSearch - INFO - 🤖 Getting detailed LLM explanation for 3 verses
+2025-12-08 21:30:22 - QuranSearch - INFO - 📝 Sending prompt to LLM (mistralai/Mistral-7B-Instruct-v0.1)...
+2025-12-08 21:30:22 - QuranSearch - ERROR - LLM attempt 1 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 21:30:26 - QuranSearch - ERROR - LLM attempt 2 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 21:30:29 - QuranSearch - ERROR - LLM attempt 3 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 21:30:29 - QuranSearch - ERROR - 🤖 LLM service error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 21:30:29 - QuranSearch - INFO - 📝 Using detailed fallback explanation
+2025-12-08 21:30:29 - QuranSearch - INFO - ✅ LLM explanation generated (1276 chars)
+2025-12-08 21:30:29 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 3 verses
+2025-12-08 21:40:53 - QuranSearch - INFO - Logger initialized
+2025-12-08 21:40:54 - QuranSearch - INFO - ✅ Hybrid Qdrant initialized
+2025-12-08 21:40:54 - QuranSearch - INFO -   Dense: quran_dense
+2025-12-08 21:40:54 - QuranSearch - INFO -   Sparse: quran_sparse
+2025-12-08 21:40:54 - QuranSearch - INFO - ✓ quran_dense: 6236 points
+2025-12-08 21:40:54 - QuranSearch - INFO - ✓ quran_sparse: 6236 points
+2025-12-08 21:40:54 - QuranSearch - INFO - Starting server on http://0.0.0.0:8000
+2025-12-08 21:40:54 - QuranSearch - INFO - 🚀 Quran Search API Starting...
+2025-12-08 21:40:54 - QuranSearch - INFO - ✅ Hybrid Search Enabled
+2025-12-08 21:40:54 - QuranSearch - INFO - ✅ LLM Explanations Enabled
+2025-12-08 21:40:54 - QuranSearch - INFO - ✅ PostgreSQL Integration Ready
+2025-12-08 21:41:02 - QuranSearch - INFO - Logger initialized
+2025-12-08 21:41:03 - QuranSearch - INFO - ✅ Hybrid Qdrant initialized
+2025-12-08 21:41:03 - QuranSearch - INFO -   Dense: quran_dense
+2025-12-08 21:41:03 - QuranSearch - INFO -   Sparse: quran_sparse
+2025-12-08 21:41:03 - QuranSearch - INFO - ✓ quran_dense: 6236 points
+2025-12-08 21:41:03 - QuranSearch - INFO - ✓ quran_sparse: 6236 points
+2025-12-08 21:41:04 - QuranSearch - INFO - Starting server on http://0.0.0.0:8000
+2025-12-08 21:41:04 - QuranSearch - INFO - 🚀 Quran Search API Starting...
+2025-12-08 21:41:04 - QuranSearch - INFO - ✅ Hybrid Search Enabled
+2025-12-08 21:41:04 - QuranSearch - INFO - ✅ LLM Explanations Enabled
+2025-12-08 21:41:04 - QuranSearch - INFO - ✅ PostgreSQL Integration Ready
+2025-12-08 21:43:28 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 21:43:28 - QuranSearch - INFO -   Query: 'نماز کی اہمیت'
+2025-12-08 21:43:28 - QuranSearch - INFO -   Top K: 3
+2025-12-08 21:43:28 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 21:43:28 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 21:43:28 - QuranSearch - INFO - Query: 'نماز کی اہمیت'
+2025-12-08 21:43:34 - QuranSearch - INFO - Colab response status: 404
+2025-12-08 21:43:34 - QuranSearch - ERROR - Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 21:43:34 - QuranSearch - ERROR - 🚨 Embedding service error: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 21:43:34 - QuranSearch - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/abdul/islamic_search/Quran_Clone_data/Quran_Hadit_Retrieval/backend/services/embedding_service.py", line 93, in get_embeddings_from_colab
+    raise Exception(error_msg)
+Exception: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+
+2025-12-08 21:43:34 - QuranSearch - INFO - Using fallback dummy embeddings
+2025-12-08 21:43:34 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 21:43:34 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=5 indices
+2025-12-08 21:43:34 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 21:43:34 - QuranSearch - INFO - Dense search returned 6 points
+2025-12-08 21:43:34 - QuranSearch - INFO - Searching sparse collection...
+2025-12-08 21:43:34 - QuranSearch - WARNING - Sparse search failed: Unsupported query type: <class 'dict'>
+2025-12-08 21:43:34 - QuranSearch - INFO - ✅ Found 3 combined results
+2025-12-08 21:43:34 - QuranSearch - INFO - ✅ Qdrant search successful, got 3 hits
+2025-12-08 21:43:34 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 21:43:34 - QuranSearch - INFO -   Verse 1: ID=3762, Quran_ID=3762
+2025-12-08 21:43:34 - QuranSearch - INFO -   Verse 2: ID=2583, Quran_ID=2583
+2025-12-08 21:43:34 - QuranSearch - INFO -   Verse 3: ID=273, Quran_ID=273
+2025-12-08 21:43:34 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 21:43:34 - QuranSearch - INFO - Fetching 3 verses from PostgreSQL
+2025-12-08 21:43:34 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 21:43:34 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 21:43:34 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 21:43:34 - QuranSearch - INFO -   Formatted result 1: Surah 36:57
+2025-12-08 21:43:34 - QuranSearch - INFO -   Formatted result 2: Surah 21:100
+2025-12-08 21:43:34 - QuranSearch - INFO -   Formatted result 3: Surah 2:266
+2025-12-08 21:43:34 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 21:43:34 - QuranSearch - INFO - 🤖 Getting detailed LLM explanation for 3 verses
+2025-12-08 21:43:34 - QuranSearch - INFO - 📝 Sending prompt to LLM (mistralai/Mistral-7B-Instruct-v0.1)...
+2025-12-08 21:43:35 - QuranSearch - ERROR - LLM attempt 1 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 21:43:39 - QuranSearch - ERROR - LLM attempt 2 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 21:43:42 - QuranSearch - ERROR - LLM attempt 3 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 21:43:42 - QuranSearch - ERROR - 🤖 LLM service error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 21:43:42 - QuranSearch - INFO - 📝 Using detailed fallback explanation
+2025-12-08 21:43:42 - QuranSearch - INFO - ✅ LLM explanation generated (1276 chars)
+2025-12-08 21:43:42 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 3 verses
+2025-12-08 21:48:44 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 21:48:44 - QuranSearch - INFO -   Query: 'نماز کی اہمیت'
+2025-12-08 21:48:44 - QuranSearch - INFO -   Top K: 3
+2025-12-08 21:48:44 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 21:48:44 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 21:48:44 - QuranSearch - INFO - Query: 'نماز کی اہمیت'
+2025-12-08 21:48:46 - QuranSearch - INFO - Colab response status: 404
+2025-12-08 21:48:46 - QuranSearch - ERROR - Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 21:48:46 - QuranSearch - ERROR - 🚨 Embedding service error: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 21:48:46 - QuranSearch - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/abdul/islamic_search/Quran_Clone_data/Quran_Hadit_Retrieval/backend/services/embedding_service.py", line 93, in get_embeddings_from_colab
+    raise Exception(error_msg)
+Exception: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+
+2025-12-08 21:48:46 - QuranSearch - INFO - Using fallback dummy embeddings
+2025-12-08 21:48:46 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 21:48:46 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=5 indices
+2025-12-08 21:48:46 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 21:48:46 - QuranSearch - INFO - Dense search returned 6 points
+2025-12-08 21:48:46 - QuranSearch - INFO - Searching sparse collection...
+2025-12-08 21:48:46 - QuranSearch - WARNING - Sparse search failed: Unsupported query type: <class 'dict'>
+2025-12-08 21:48:46 - QuranSearch - INFO - ✅ Found 3 combined results
+2025-12-08 21:48:46 - QuranSearch - INFO - ✅ Qdrant search successful, got 3 hits
+2025-12-08 21:48:46 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 21:48:46 - QuranSearch - INFO -   Verse 1: ID=3762, Quran_ID=3762
+2025-12-08 21:48:46 - QuranSearch - INFO -   Verse 2: ID=2583, Quran_ID=2583
+2025-12-08 21:48:46 - QuranSearch - INFO -   Verse 3: ID=273, Quran_ID=273
+2025-12-08 21:48:46 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 21:48:46 - QuranSearch - INFO - Fetching 3 verses from PostgreSQL
+2025-12-08 21:48:46 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 21:48:46 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 21:48:46 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 21:48:46 - QuranSearch - INFO -   Formatted result 1: Surah 36:57
+2025-12-08 21:48:46 - QuranSearch - INFO -   Formatted result 2: Surah 21:100
+2025-12-08 21:48:46 - QuranSearch - INFO -   Formatted result 3: Surah 2:266
+2025-12-08 21:48:46 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 21:48:46 - QuranSearch - INFO - 🤖 Getting detailed LLM explanation for 3 verses
+2025-12-08 21:48:46 - QuranSearch - INFO - 📝 Sending prompt to LLM (mistralai/Mistral-7B-Instruct-v0.1)...
+2025-12-08 21:48:48 - QuranSearch - ERROR - LLM attempt 1 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 21:48:51 - QuranSearch - ERROR - LLM attempt 2 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 21:48:54 - QuranSearch - ERROR - LLM attempt 3 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 21:48:54 - QuranSearch - ERROR - 🤖 LLM service error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 21:48:54 - QuranSearch - INFO - 📝 Using detailed fallback explanation
+2025-12-08 21:48:54 - QuranSearch - INFO - ✅ LLM explanation generated (1276 chars)
+2025-12-08 21:48:54 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 3 verses
+2025-12-08 21:57:02 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 21:57:02 - QuranSearch - INFO -   Query: 'نماز کی اہمیت'
+2025-12-08 21:57:02 - QuranSearch - INFO -   Top K: 3
+2025-12-08 21:57:02 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 21:57:02 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 21:57:02 - QuranSearch - INFO - Query: 'نماز کی اہمیت'
+2025-12-08 21:57:03 - QuranSearch - INFO - Colab response status: 404
+2025-12-08 21:57:03 - QuranSearch - ERROR - Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 21:57:03 - QuranSearch - ERROR - 🚨 Embedding service error: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 21:57:03 - QuranSearch - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/abdul/islamic_search/Quran_Clone_data/Quran_Hadit_Retrieval/backend/services/embedding_service.py", line 93, in get_embeddings_from_colab
+    raise Exception(error_msg)
+Exception: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+
+2025-12-08 21:57:03 - QuranSearch - INFO - Using fallback dummy embeddings
+2025-12-08 21:57:03 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 21:57:03 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=5 indices
+2025-12-08 21:57:03 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 21:57:03 - QuranSearch - INFO - Dense search returned 6 points
+2025-12-08 21:57:03 - QuranSearch - INFO - Searching sparse collection...
+2025-12-08 21:57:03 - QuranSearch - WARNING - Sparse search failed: Unsupported query type: <class 'dict'>
+2025-12-08 21:57:03 - QuranSearch - INFO - ✅ Found 3 combined results
+2025-12-08 21:57:03 - QuranSearch - INFO - ✅ Qdrant search successful, got 3 hits
+2025-12-08 21:57:03 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 21:57:03 - QuranSearch - INFO -   Verse 1: ID=3762, Quran_ID=3762
+2025-12-08 21:57:03 - QuranSearch - INFO -   Verse 2: ID=2583, Quran_ID=2583
+2025-12-08 21:57:03 - QuranSearch - INFO -   Verse 3: ID=273, Quran_ID=273
+2025-12-08 21:57:03 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 21:57:03 - QuranSearch - INFO - Fetching 3 verses from PostgreSQL
+2025-12-08 21:57:03 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 21:57:03 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 21:57:03 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 21:57:03 - QuranSearch - INFO -   Formatted result 1: Surah 36:57
+2025-12-08 21:57:03 - QuranSearch - INFO -   Formatted result 2: Surah 21:100
+2025-12-08 21:57:03 - QuranSearch - INFO -   Formatted result 3: Surah 2:266
+2025-12-08 21:57:03 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 21:57:03 - QuranSearch - INFO - 🤖 Getting detailed LLM explanation for 3 verses
+2025-12-08 21:57:03 - QuranSearch - INFO - 📝 Sending prompt to LLM (mistralai/Mistral-7B-Instruct-v0.1)...
+2025-12-08 21:57:03 - QuranSearch - ERROR - LLM attempt 1 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 21:57:07 - QuranSearch - ERROR - LLM attempt 2 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 21:57:10 - QuranSearch - ERROR - LLM attempt 3 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 21:57:10 - QuranSearch - ERROR - 🤖 LLM service error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 21:57:10 - QuranSearch - INFO - 📝 Using detailed fallback explanation
+2025-12-08 21:57:10 - QuranSearch - INFO - ✅ LLM explanation generated (1276 chars)
+2025-12-08 21:57:10 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 3 verses
+2025-12-08 21:59:47 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 21:59:47 - QuranSearch - INFO -   Query: '???? ?? ?????'
+2025-12-08 21:59:47 - QuranSearch - INFO -   Top K: 3
+2025-12-08 21:59:47 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 21:59:47 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 21:59:47 - QuranSearch - INFO - Query: '???? ?? ?????'
+2025-12-08 21:59:48 - QuranSearch - INFO - Colab response status: 404
+2025-12-08 21:59:48 - QuranSearch - ERROR - Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 21:59:48 - QuranSearch - ERROR - 🚨 Embedding service error: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 21:59:48 - QuranSearch - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/abdul/islamic_search/Quran_Clone_data/Quran_Hadit_Retrieval/backend/services/embedding_service.py", line 93, in get_embeddings_from_colab
+    raise Exception(error_msg)
+Exception: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+
+2025-12-08 21:59:48 - QuranSearch - INFO - Using fallback dummy embeddings
+2025-12-08 21:59:48 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 21:59:48 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=5 indices
+2025-12-08 21:59:48 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 21:59:48 - QuranSearch - INFO - Dense search returned 6 points
+2025-12-08 21:59:48 - QuranSearch - INFO - Searching sparse collection...
+2025-12-08 21:59:48 - QuranSearch - WARNING - Sparse search failed: Unsupported query type: <class 'dict'>
+2025-12-08 21:59:48 - QuranSearch - INFO - ✅ Found 3 combined results
+2025-12-08 21:59:48 - QuranSearch - INFO - ✅ Qdrant search successful, got 3 hits
+2025-12-08 21:59:48 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 21:59:48 - QuranSearch - INFO -   Verse 1: ID=3762, Quran_ID=3762
+2025-12-08 21:59:48 - QuranSearch - INFO -   Verse 2: ID=2583, Quran_ID=2583
+2025-12-08 21:59:48 - QuranSearch - INFO -   Verse 3: ID=273, Quran_ID=273
+2025-12-08 21:59:48 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 21:59:48 - QuranSearch - INFO - Fetching 3 verses from PostgreSQL
+2025-12-08 21:59:48 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 21:59:48 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 21:59:48 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 21:59:48 - QuranSearch - INFO -   Formatted result 1: Surah 36:57
+2025-12-08 21:59:48 - QuranSearch - INFO -   Formatted result 2: Surah 21:100
+2025-12-08 21:59:48 - QuranSearch - INFO -   Formatted result 3: Surah 2:266
+2025-12-08 21:59:48 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 21:59:48 - QuranSearch - INFO - 🤖 Getting detailed LLM explanation for 3 verses
+2025-12-08 21:59:48 - QuranSearch - INFO - 📝 Sending prompt to LLM (mistralai/Mistral-7B-Instruct-v0.1)...
+2025-12-08 22:00:00 - QuranSearch - ERROR - LLM attempt 1 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 22:00:03 - QuranSearch - ERROR - LLM attempt 2 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 22:00:06 - QuranSearch - ERROR - LLM attempt 3 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 22:00:06 - QuranSearch - ERROR - 🤖 LLM service error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 22:00:06 - QuranSearch - INFO - 📝 Using detailed fallback explanation
+2025-12-08 22:00:06 - QuranSearch - INFO - ✅ LLM explanation generated (1276 chars)
+2025-12-08 22:00:06 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 3 verses
+2025-12-08 22:00:51 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 22:00:51 - QuranSearch - INFO -   Query: 'نماز کی اہمیت'
+2025-12-08 22:00:51 - QuranSearch - INFO -   Top K: 3
+2025-12-08 22:00:51 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 22:00:51 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 22:00:51 - QuranSearch - INFO - Query: 'نماز کی اہمیت'
+2025-12-08 22:00:52 - QuranSearch - INFO - Colab response status: 404
+2025-12-08 22:00:52 - QuranSearch - ERROR - Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 22:00:52 - QuranSearch - ERROR - 🚨 Embedding service error: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 22:00:52 - QuranSearch - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/abdul/islamic_search/Quran_Clone_data/Quran_Hadit_Retrieval/backend/services/embedding_service.py", line 93, in get_embeddings_from_colab
+    raise Exception(error_msg)
+Exception: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+
+2025-12-08 22:00:52 - QuranSearch - INFO - Using fallback dummy embeddings
+2025-12-08 22:00:52 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 22:00:52 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=5 indices
+2025-12-08 22:00:52 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 22:00:52 - QuranSearch - INFO - Dense search returned 6 points
+2025-12-08 22:00:52 - QuranSearch - INFO - Searching sparse collection...
+2025-12-08 22:00:52 - QuranSearch - WARNING - Sparse search failed: Unsupported query type: <class 'dict'>
+2025-12-08 22:00:52 - QuranSearch - INFO - ✅ Found 3 combined results
+2025-12-08 22:00:52 - QuranSearch - INFO - ✅ Qdrant search successful, got 3 hits
+2025-12-08 22:00:52 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 22:00:52 - QuranSearch - INFO -   Verse 1: ID=3762, Quran_ID=3762
+2025-12-08 22:00:52 - QuranSearch - INFO -   Verse 2: ID=2583, Quran_ID=2583
+2025-12-08 22:00:52 - QuranSearch - INFO -   Verse 3: ID=273, Quran_ID=273
+2025-12-08 22:00:52 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 22:00:52 - QuranSearch - INFO - Fetching 3 verses from PostgreSQL
+2025-12-08 22:00:52 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 22:00:52 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 22:00:52 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 22:00:52 - QuranSearch - INFO -   Formatted result 1: Surah 36:57
+2025-12-08 22:00:52 - QuranSearch - INFO -   Formatted result 2: Surah 21:100
+2025-12-08 22:00:52 - QuranSearch - INFO -   Formatted result 3: Surah 2:266
+2025-12-08 22:00:52 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 22:00:52 - QuranSearch - INFO - 🤖 Getting detailed LLM explanation for 3 verses
+2025-12-08 22:00:52 - QuranSearch - INFO - 📝 Sending prompt to LLM (mistralai/Mistral-7B-Instruct-v0.1)...
+2025-12-08 22:00:52 - QuranSearch - ERROR - LLM attempt 1 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 22:00:56 - QuranSearch - ERROR - LLM attempt 2 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 22:00:59 - QuranSearch - ERROR - LLM attempt 3 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 22:00:59 - QuranSearch - ERROR - 🤖 LLM service error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 22:00:59 - QuranSearch - INFO - 📝 Using detailed fallback explanation
+2025-12-08 22:00:59 - QuranSearch - INFO - ✅ LLM explanation generated (1276 chars)
+2025-12-08 22:00:59 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 3 verses
+2025-12-08 23:04:24 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 23:04:24 - QuranSearch - INFO -   Query: 'نماز کی اہمیت'
+2025-12-08 23:04:24 - QuranSearch - INFO -   Top K: 3
+2025-12-08 23:04:24 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 23:04:24 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 23:04:24 - QuranSearch - INFO - Query: 'نماز کی اہمیت'
+2025-12-08 23:04:25 - QuranSearch - INFO - Colab response status: 404
+2025-12-08 23:04:25 - QuranSearch - ERROR - Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:04:25 - QuranSearch - ERROR - 🚨 Embedding service error: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:04:25 - QuranSearch - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/abdul/islamic_search/Quran_Clone_data/Quran_Hadit_Retrieval/backend/services/embedding_service.py", line 93, in get_embeddings_from_colab
+    raise Exception(error_msg)
+Exception: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+
+2025-12-08 23:04:25 - QuranSearch - INFO - Using fallback dummy embeddings
+2025-12-08 23:04:25 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 23:04:25 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=5 indices
+2025-12-08 23:04:25 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 23:04:25 - QuranSearch - INFO - Dense search returned 6 points
+2025-12-08 23:04:25 - QuranSearch - INFO - Searching sparse collection...
+2025-12-08 23:04:25 - QuranSearch - WARNING - Sparse search failed: Unsupported query type: <class 'dict'>
+2025-12-08 23:04:25 - QuranSearch - INFO - ✅ Found 3 combined results
+2025-12-08 23:04:25 - QuranSearch - INFO - ✅ Qdrant search successful, got 3 hits
+2025-12-08 23:04:25 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 23:04:25 - QuranSearch - INFO -   Verse 1: ID=3762, Quran_ID=3762
+2025-12-08 23:04:25 - QuranSearch - INFO -   Verse 2: ID=2583, Quran_ID=2583
+2025-12-08 23:04:25 - QuranSearch - INFO -   Verse 3: ID=273, Quran_ID=273
+2025-12-08 23:04:25 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 23:04:25 - QuranSearch - INFO - Fetching 3 verses from PostgreSQL
+2025-12-08 23:04:25 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 23:04:25 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 23:04:25 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 23:04:25 - QuranSearch - INFO -   Formatted result 1: Surah 36:57
+2025-12-08 23:04:25 - QuranSearch - INFO -   Formatted result 2: Surah 21:100
+2025-12-08 23:04:25 - QuranSearch - INFO -   Formatted result 3: Surah 2:266
+2025-12-08 23:04:25 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 23:04:25 - QuranSearch - INFO - 🤖 Getting detailed LLM explanation for 3 verses
+2025-12-08 23:04:25 - QuranSearch - INFO - 📝 Sending prompt to LLM (mistralai/Mistral-7B-Instruct-v0.1)...
+2025-12-08 23:04:26 - QuranSearch - ERROR - LLM attempt 1 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:04:29 - QuranSearch - ERROR - LLM attempt 2 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:04:32 - QuranSearch - ERROR - LLM attempt 3 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:04:32 - QuranSearch - ERROR - 🤖 LLM service error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:04:32 - QuranSearch - INFO - 📝 Using detailed fallback explanation
+2025-12-08 23:04:32 - QuranSearch - INFO - ✅ LLM explanation generated (1276 chars)
+2025-12-08 23:04:32 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 3 verses
+2025-12-08 23:15:04 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 23:15:04 - QuranSearch - INFO -   Query: 'نماز کی اہمیت'
+2025-12-08 23:15:04 - QuranSearch - INFO -   Top K: 3
+2025-12-08 23:15:04 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 23:15:04 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 23:15:04 - QuranSearch - INFO - Query: 'نماز کی اہمیت'
+2025-12-08 23:15:04 - QuranSearch - INFO - Colab response status: 404
+2025-12-08 23:15:04 - QuranSearch - ERROR - Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:15:04 - QuranSearch - ERROR - 🚨 Embedding service error: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:15:04 - QuranSearch - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/abdul/islamic_search/Quran_Clone_data/Quran_Hadit_Retrieval/backend/services/embedding_service.py", line 93, in get_embeddings_from_colab
+    raise Exception(error_msg)
+Exception: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+
+2025-12-08 23:15:04 - QuranSearch - INFO - Using fallback dummy embeddings
+2025-12-08 23:15:04 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 23:15:04 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=5 indices
+2025-12-08 23:15:04 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 23:15:04 - QuranSearch - INFO - Dense search returned 6 points
+2025-12-08 23:15:04 - QuranSearch - INFO - Searching sparse collection...
+2025-12-08 23:15:04 - QuranSearch - WARNING - Sparse search failed: Unsupported query type: <class 'dict'>
+2025-12-08 23:15:04 - QuranSearch - INFO - ✅ Found 3 combined results
+2025-12-08 23:15:04 - QuranSearch - INFO - ✅ Qdrant search successful, got 3 hits
+2025-12-08 23:15:04 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 23:15:04 - QuranSearch - INFO -   Verse 1: ID=3762, Quran_ID=3762
+2025-12-08 23:15:04 - QuranSearch - INFO -   Verse 2: ID=2583, Quran_ID=2583
+2025-12-08 23:15:04 - QuranSearch - INFO -   Verse 3: ID=273, Quran_ID=273
+2025-12-08 23:15:04 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 23:15:04 - QuranSearch - INFO - Fetching 3 verses from PostgreSQL
+2025-12-08 23:15:04 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 23:15:04 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 23:15:04 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 23:15:04 - QuranSearch - INFO -   Formatted result 1: Surah 36:57
+2025-12-08 23:15:04 - QuranSearch - INFO -   Formatted result 2: Surah 21:100
+2025-12-08 23:15:04 - QuranSearch - INFO -   Formatted result 3: Surah 2:266
+2025-12-08 23:15:04 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 23:15:04 - QuranSearch - INFO - 🤖 Getting detailed LLM explanation for 3 verses
+2025-12-08 23:15:04 - QuranSearch - INFO - 📝 Sending prompt to LLM (mistralai/Mistral-7B-Instruct-v0.1)...
+2025-12-08 23:15:05 - QuranSearch - ERROR - LLM attempt 1 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:15:08 - QuranSearch - ERROR - LLM attempt 2 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:15:12 - QuranSearch - ERROR - LLM attempt 3 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:15:12 - QuranSearch - ERROR - 🤖 LLM service error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:15:12 - QuranSearch - INFO - 📝 Using detailed fallback explanation
+2025-12-08 23:15:12 - QuranSearch - INFO - ✅ LLM explanation generated (1276 chars)
+2025-12-08 23:15:12 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 3 verses
+2025-12-08 23:16:33 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 23:16:33 - QuranSearch - INFO -   Query: '?????'
+2025-12-08 23:16:33 - QuranSearch - INFO -   Top K: 3
+2025-12-08 23:16:33 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 23:16:33 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 23:16:33 - QuranSearch - INFO - Query: '?????'
+2025-12-08 23:16:34 - QuranSearch - INFO - Colab response status: 404
+2025-12-08 23:16:34 - QuranSearch - ERROR - Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:16:34 - QuranSearch - ERROR - 🚨 Embedding service error: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:16:34 - QuranSearch - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/abdul/islamic_search/Quran_Clone_data/Quran_Hadit_Retrieval/backend/services/embedding_service.py", line 93, in get_embeddings_from_colab
+    raise Exception(error_msg)
+Exception: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+
+2025-12-08 23:16:34 - QuranSearch - INFO - Using fallback dummy embeddings
+2025-12-08 23:16:34 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 23:16:34 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=5 indices
+2025-12-08 23:16:34 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 23:16:34 - QuranSearch - INFO - Dense search returned 6 points
+2025-12-08 23:16:34 - QuranSearch - INFO - Searching sparse collection...
+2025-12-08 23:16:34 - QuranSearch - WARNING - Sparse search failed: Unsupported query type: <class 'dict'>
+2025-12-08 23:16:34 - QuranSearch - INFO - ✅ Found 3 combined results
+2025-12-08 23:16:34 - QuranSearch - INFO - ✅ Qdrant search successful, got 3 hits
+2025-12-08 23:16:34 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 23:16:34 - QuranSearch - INFO -   Verse 1: ID=3762, Quran_ID=3762
+2025-12-08 23:16:34 - QuranSearch - INFO -   Verse 2: ID=2583, Quran_ID=2583
+2025-12-08 23:16:34 - QuranSearch - INFO -   Verse 3: ID=273, Quran_ID=273
+2025-12-08 23:16:34 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 23:16:34 - QuranSearch - INFO - Fetching 3 verses from PostgreSQL
+2025-12-08 23:16:34 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 23:16:34 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 23:16:34 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 23:16:34 - QuranSearch - INFO -   Formatted result 1: Surah 36:57
+2025-12-08 23:16:34 - QuranSearch - INFO -   Formatted result 2: Surah 21:100
+2025-12-08 23:16:34 - QuranSearch - INFO -   Formatted result 3: Surah 2:266
+2025-12-08 23:16:34 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 23:16:34 - QuranSearch - INFO - 🤖 Getting detailed LLM explanation for 3 verses
+2025-12-08 23:16:34 - QuranSearch - INFO - 📝 Sending prompt to LLM (mistralai/Mistral-7B-Instruct-v0.1)...
+2025-12-08 23:16:35 - QuranSearch - ERROR - LLM attempt 1 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:16:38 - QuranSearch - ERROR - LLM attempt 2 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:16:41 - QuranSearch - ERROR - LLM attempt 3 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:16:41 - QuranSearch - ERROR - 🤖 LLM service error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:16:41 - QuranSearch - INFO - 📝 Using detailed fallback explanation
+2025-12-08 23:16:41 - QuranSearch - INFO - ✅ LLM explanation generated (1268 chars)
+2025-12-08 23:16:41 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 3 verses
+2025-12-08 23:18:58 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 23:18:58 - QuranSearch - INFO -   Query: '???? ?? ?????'
+2025-12-08 23:18:58 - QuranSearch - INFO -   Top K: 3
+2025-12-08 23:18:58 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 23:18:58 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 23:18:58 - QuranSearch - INFO - Query: '???? ?? ?????'
+2025-12-08 23:18:59 - QuranSearch - INFO - Colab response status: 404
+2025-12-08 23:18:59 - QuranSearch - ERROR - Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:18:59 - QuranSearch - ERROR - 🚨 Embedding service error: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:18:59 - QuranSearch - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/abdul/islamic_search/Quran_Clone_data/Quran_Hadit_Retrieval/backend/services/embedding_service.py", line 93, in get_embeddings_from_colab
+    raise Exception(error_msg)
+Exception: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+
+2025-12-08 23:18:59 - QuranSearch - INFO - Using fallback dummy embeddings
+2025-12-08 23:18:59 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 23:18:59 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=5 indices
+2025-12-08 23:18:59 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 23:18:59 - QuranSearch - INFO - Dense search returned 6 points
+2025-12-08 23:18:59 - QuranSearch - INFO - Searching sparse collection...
+2025-12-08 23:18:59 - QuranSearch - WARNING - Sparse search failed: Unsupported query type: <class 'dict'>
+2025-12-08 23:18:59 - QuranSearch - INFO - ✅ Found 3 combined results
+2025-12-08 23:18:59 - QuranSearch - INFO - ✅ Qdrant search successful, got 3 hits
+2025-12-08 23:18:59 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 23:18:59 - QuranSearch - INFO -   Verse 1: ID=3762, Quran_ID=3762
+2025-12-08 23:18:59 - QuranSearch - INFO -   Verse 2: ID=2583, Quran_ID=2583
+2025-12-08 23:18:59 - QuranSearch - INFO -   Verse 3: ID=273, Quran_ID=273
+2025-12-08 23:18:59 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 23:18:59 - QuranSearch - INFO - Fetching 3 verses from PostgreSQL
+2025-12-08 23:18:59 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 23:18:59 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 23:18:59 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 23:18:59 - QuranSearch - INFO -   Formatted result 1: Surah 36:57
+2025-12-08 23:18:59 - QuranSearch - INFO -   Formatted result 2: Surah 21:100
+2025-12-08 23:18:59 - QuranSearch - INFO -   Formatted result 3: Surah 2:266
+2025-12-08 23:18:59 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 23:18:59 - QuranSearch - INFO - 🤖 Getting detailed LLM explanation for 3 verses
+2025-12-08 23:18:59 - QuranSearch - INFO - 📝 Sending prompt to LLM (mistralai/Mistral-7B-Instruct-v0.1)...
+2025-12-08 23:19:00 - QuranSearch - ERROR - LLM attempt 1 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:19:03 - QuranSearch - ERROR - LLM attempt 2 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:19:06 - QuranSearch - ERROR - LLM attempt 3 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:19:06 - QuranSearch - ERROR - 🤖 LLM service error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:19:06 - QuranSearch - INFO - 📝 Using detailed fallback explanation
+2025-12-08 23:19:06 - QuranSearch - INFO - ✅ LLM explanation generated (1276 chars)
+2025-12-08 23:19:06 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 3 verses
+2025-12-08 23:19:41 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 23:19:41 - QuranSearch - INFO -   Query: '???? ?? ?????'
+2025-12-08 23:19:41 - QuranSearch - INFO -   Top K: 3
+2025-12-08 23:19:41 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 23:19:41 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 23:19:41 - QuranSearch - INFO - Query: '???? ?? ?????'
+2025-12-08 23:19:42 - QuranSearch - INFO - Colab response status: 404
+2025-12-08 23:19:42 - QuranSearch - ERROR - Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:19:42 - QuranSearch - ERROR - 🚨 Embedding service error: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:19:42 - QuranSearch - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/abdul/islamic_search/Quran_Clone_data/Quran_Hadit_Retrieval/backend/services/embedding_service.py", line 93, in get_embeddings_from_colab
+    raise Exception(error_msg)
+Exception: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+
+2025-12-08 23:19:42 - QuranSearch - INFO - Using fallback dummy embeddings
+2025-12-08 23:19:42 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 23:19:42 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=5 indices
+2025-12-08 23:19:42 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 23:19:42 - QuranSearch - INFO - Dense search returned 6 points
+2025-12-08 23:19:42 - QuranSearch - INFO - Searching sparse collection...
+2025-12-08 23:19:42 - QuranSearch - WARNING - Sparse search failed: Unsupported query type: <class 'dict'>
+2025-12-08 23:19:42 - QuranSearch - INFO - ✅ Found 3 combined results
+2025-12-08 23:19:42 - QuranSearch - INFO - ✅ Qdrant search successful, got 3 hits
+2025-12-08 23:19:42 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 23:19:42 - QuranSearch - INFO -   Verse 1: ID=3762, Quran_ID=3762
+2025-12-08 23:19:42 - QuranSearch - INFO -   Verse 2: ID=2583, Quran_ID=2583
+2025-12-08 23:19:42 - QuranSearch - INFO -   Verse 3: ID=273, Quran_ID=273
+2025-12-08 23:19:42 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 23:19:42 - QuranSearch - INFO - Fetching 3 verses from PostgreSQL
+2025-12-08 23:19:42 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 23:19:42 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 23:19:42 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 23:19:42 - QuranSearch - INFO -   Formatted result 1: Surah 36:57
+2025-12-08 23:19:42 - QuranSearch - INFO -   Formatted result 2: Surah 21:100
+2025-12-08 23:19:42 - QuranSearch - INFO -   Formatted result 3: Surah 2:266
+2025-12-08 23:19:42 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 23:19:42 - QuranSearch - INFO - 🤖 Getting detailed LLM explanation for 3 verses
+2025-12-08 23:19:42 - QuranSearch - INFO - 📝 Sending prompt to LLM (mistralai/Mistral-7B-Instruct-v0.1)...
+2025-12-08 23:19:42 - QuranSearch - ERROR - LLM attempt 1 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:19:45 - QuranSearch - ERROR - LLM attempt 2 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:19:49 - QuranSearch - ERROR - LLM attempt 3 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:19:49 - QuranSearch - ERROR - 🤖 LLM service error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:19:49 - QuranSearch - INFO - 📝 Using detailed fallback explanation
+2025-12-08 23:19:49 - QuranSearch - INFO - ✅ LLM explanation generated (1276 chars)
+2025-12-08 23:19:49 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 3 verses
+2025-12-08 23:24:11 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 23:24:11 - QuranSearch - INFO -   Query: 'معیشت میں مساوات'
+2025-12-08 23:24:11 - QuranSearch - INFO -   Top K: 5
+2025-12-08 23:24:11 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 23:24:11 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 23:24:11 - QuranSearch - INFO - Query: 'معیشت میں مساوات'
+2025-12-08 23:24:12 - QuranSearch - INFO - Colab response status: 404
+2025-12-08 23:24:12 - QuranSearch - ERROR - Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:24:12 - QuranSearch - ERROR - 🚨 Embedding service error: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:24:12 - QuranSearch - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/abdul/islamic_search/Quran_Clone_data/Quran_Hadit_Retrieval/backend/services/embedding_service.py", line 93, in get_embeddings_from_colab
+    raise Exception(error_msg)
+Exception: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+
+2025-12-08 23:24:12 - QuranSearch - INFO - Using fallback dummy embeddings
+2025-12-08 23:24:12 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 23:24:12 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=5 indices
+2025-12-08 23:24:12 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 23:24:12 - QuranSearch - INFO - Dense search returned 10 points
+2025-12-08 23:24:12 - QuranSearch - INFO - Searching sparse collection...
+2025-12-08 23:24:12 - QuranSearch - WARNING - Sparse search failed: Unsupported query type: <class 'dict'>
+2025-12-08 23:24:12 - QuranSearch - INFO - ✅ Found 5 combined results
+2025-12-08 23:24:12 - QuranSearch - INFO - ✅ Qdrant search successful, got 5 hits
+2025-12-08 23:24:12 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 23:24:12 - QuranSearch - INFO -   Verse 1: ID=3762, Quran_ID=3762
+2025-12-08 23:24:12 - QuranSearch - INFO -   Verse 2: ID=2583, Quran_ID=2583
+2025-12-08 23:24:12 - QuranSearch - INFO -   Verse 3: ID=273, Quran_ID=273
+2025-12-08 23:24:12 - QuranSearch - INFO -   Verse 4: ID=1895, Quran_ID=1895
+2025-12-08 23:24:12 - QuranSearch - INFO -   Verse 5: ID=3836, Quran_ID=3836
+2025-12-08 23:24:12 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 23:24:12 - QuranSearch - INFO - Fetching 5 verses from PostgreSQL
+2025-12-08 23:24:13 - QuranSearch - INFO - ✅ Retrieved 5 verses from PostgreSQL
+2025-12-08 23:24:13 - QuranSearch - INFO - ✅ Retrieved 5 verses from PostgreSQL
+2025-12-08 23:24:13 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 23:24:13 - QuranSearch - INFO -   Formatted result 1: Surah 36:57
+2025-12-08 23:24:13 - QuranSearch - INFO -   Formatted result 2: Surah 21:100
+2025-12-08 23:24:13 - QuranSearch - INFO -   Formatted result 3: Surah 2:266
+2025-12-08 23:24:13 - QuranSearch - INFO -   Formatted result 4: Surah 15:93
+2025-12-08 23:24:13 - QuranSearch - INFO -   Formatted result 5: Surah 37:48
+2025-12-08 23:24:13 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 23:24:13 - QuranSearch - INFO - 🤖 Getting detailed LLM explanation for 5 verses
+2025-12-08 23:24:13 - QuranSearch - INFO - 📝 Sending prompt to LLM (mistralai/Mistral-7B-Instruct-v0.1)...
+2025-12-08 23:24:13 - QuranSearch - ERROR - LLM attempt 1 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:24:17 - QuranSearch - ERROR - LLM attempt 2 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:24:20 - QuranSearch - ERROR - LLM attempt 3 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:24:20 - QuranSearch - ERROR - 🤖 LLM service error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:24:20 - QuranSearch - INFO - 📝 Using detailed fallback explanation
+2025-12-08 23:24:20 - QuranSearch - INFO - ✅ LLM explanation generated (1299 chars)
+2025-12-08 23:24:20 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 5 verses
+2025-12-08 23:25:02 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 23:25:02 - QuranSearch - INFO -   Query: 'نماز کی اہمیت'
+2025-12-08 23:25:02 - QuranSearch - INFO -   Top K: 3
+2025-12-08 23:25:02 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 23:25:02 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 23:25:02 - QuranSearch - INFO - Query: 'نماز کی اہمیت'
+2025-12-08 23:25:02 - QuranSearch - INFO - Colab response status: 404
+2025-12-08 23:25:02 - QuranSearch - ERROR - Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:25:02 - QuranSearch - ERROR - 🚨 Embedding service error: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:25:02 - QuranSearch - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/abdul/islamic_search/Quran_Clone_data/Quran_Hadit_Retrieval/backend/services/embedding_service.py", line 93, in get_embeddings_from_colab
+    raise Exception(error_msg)
+Exception: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+
+2025-12-08 23:25:02 - QuranSearch - INFO - Using fallback dummy embeddings
+2025-12-08 23:25:02 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 23:25:02 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=5 indices
+2025-12-08 23:25:02 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 23:25:02 - QuranSearch - INFO - Dense search returned 6 points
+2025-12-08 23:25:02 - QuranSearch - INFO - Searching sparse collection...
+2025-12-08 23:25:02 - QuranSearch - WARNING - Sparse search failed: Unsupported query type: <class 'dict'>
+2025-12-08 23:25:02 - QuranSearch - INFO - ✅ Found 3 combined results
+2025-12-08 23:25:02 - QuranSearch - INFO - ✅ Qdrant search successful, got 3 hits
+2025-12-08 23:25:02 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 23:25:02 - QuranSearch - INFO -   Verse 1: ID=3762, Quran_ID=3762
+2025-12-08 23:25:02 - QuranSearch - INFO -   Verse 2: ID=2583, Quran_ID=2583
+2025-12-08 23:25:02 - QuranSearch - INFO -   Verse 3: ID=273, Quran_ID=273
+2025-12-08 23:25:02 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 23:25:02 - QuranSearch - INFO - Fetching 3 verses from PostgreSQL
+2025-12-08 23:25:02 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 23:25:02 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 23:25:02 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 23:25:02 - QuranSearch - INFO -   Formatted result 1: Surah 36:57
+2025-12-08 23:25:02 - QuranSearch - INFO -   Formatted result 2: Surah 21:100
+2025-12-08 23:25:02 - QuranSearch - INFO -   Formatted result 3: Surah 2:266
+2025-12-08 23:25:02 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 23:25:02 - QuranSearch - INFO - 🤖 Getting detailed LLM explanation for 3 verses
+2025-12-08 23:25:02 - QuranSearch - INFO - 📝 Sending prompt to LLM (mistralai/Mistral-7B-Instruct-v0.1)...
+2025-12-08 23:25:03 - QuranSearch - ERROR - LLM attempt 1 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:25:06 - QuranSearch - ERROR - LLM attempt 2 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:25:09 - QuranSearch - ERROR - LLM attempt 3 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:25:09 - QuranSearch - ERROR - 🤖 LLM service error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:25:09 - QuranSearch - INFO - 📝 Using detailed fallback explanation
+2025-12-08 23:25:09 - QuranSearch - INFO - ✅ LLM explanation generated (1276 chars)
+2025-12-08 23:25:09 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 3 verses
+2025-12-08 23:28:06 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 23:28:06 - QuranSearch - INFO -   Query: 'Namaz'
+2025-12-08 23:28:06 - QuranSearch - INFO -   Top K: 5
+2025-12-08 23:28:06 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 23:28:06 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 23:28:06 - QuranSearch - INFO - Query: 'Namaz'
+2025-12-08 23:28:06 - QuranSearch - INFO - Colab response status: 404
+2025-12-08 23:28:06 - QuranSearch - ERROR - Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:28:06 - QuranSearch - ERROR - 🚨 Embedding service error: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:28:06 - QuranSearch - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/abdul/islamic_search/Quran_Clone_data/Quran_Hadit_Retrieval/backend/services/embedding_service.py", line 93, in get_embeddings_from_colab
+    raise Exception(error_msg)
+Exception: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+
+2025-12-08 23:28:06 - QuranSearch - INFO - Using fallback dummy embeddings
+2025-12-08 23:28:06 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 23:28:06 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=5 indices
+2025-12-08 23:28:06 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 23:28:06 - QuranSearch - INFO - Dense search returned 10 points
+2025-12-08 23:28:06 - QuranSearch - INFO - Searching sparse collection...
+2025-12-08 23:28:06 - QuranSearch - WARNING - Sparse search failed: Unsupported query type: <class 'dict'>
+2025-12-08 23:28:06 - QuranSearch - INFO - ✅ Found 5 combined results
+2025-12-08 23:28:06 - QuranSearch - INFO - ✅ Qdrant search successful, got 5 hits
+2025-12-08 23:28:06 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 23:28:06 - QuranSearch - INFO -   Verse 1: ID=3762, Quran_ID=3762
+2025-12-08 23:28:06 - QuranSearch - INFO -   Verse 2: ID=2583, Quran_ID=2583
+2025-12-08 23:28:06 - QuranSearch - INFO -   Verse 3: ID=273, Quran_ID=273
+2025-12-08 23:28:06 - QuranSearch - INFO -   Verse 4: ID=1895, Quran_ID=1895
+2025-12-08 23:28:06 - QuranSearch - INFO -   Verse 5: ID=3836, Quran_ID=3836
+2025-12-08 23:28:06 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 23:28:06 - QuranSearch - INFO - Fetching 5 verses from PostgreSQL
+2025-12-08 23:28:06 - QuranSearch - INFO - ✅ Retrieved 5 verses from PostgreSQL
+2025-12-08 23:28:06 - QuranSearch - INFO - ✅ Retrieved 5 verses from PostgreSQL
+2025-12-08 23:28:06 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 23:28:06 - QuranSearch - INFO -   Formatted result 1: Surah 36:57
+2025-12-08 23:28:06 - QuranSearch - INFO -   Formatted result 2: Surah 21:100
+2025-12-08 23:28:06 - QuranSearch - INFO -   Formatted result 3: Surah 2:266
+2025-12-08 23:28:06 - QuranSearch - INFO -   Formatted result 4: Surah 15:93
+2025-12-08 23:28:06 - QuranSearch - INFO -   Formatted result 5: Surah 37:48
+2025-12-08 23:28:06 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 23:28:06 - QuranSearch - INFO - 🤖 Getting detailed LLM explanation for 5 verses
+2025-12-08 23:28:06 - QuranSearch - INFO - 📝 Sending prompt to LLM (mistralai/Mistral-7B-Instruct-v0.1)...
+2025-12-08 23:28:07 - QuranSearch - ERROR - LLM attempt 1 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:28:10 - QuranSearch - ERROR - LLM attempt 2 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:28:14 - QuranSearch - ERROR - LLM attempt 3 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:28:14 - QuranSearch - ERROR - 🤖 LLM service error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:28:14 - QuranSearch - INFO - 📝 Using detailed fallback explanation
+2025-12-08 23:28:14 - QuranSearch - INFO - ✅ LLM explanation generated (1288 chars)
+2025-12-08 23:28:14 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 5 verses
+2025-12-08 23:29:13 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 23:29:13 - QuranSearch - INFO -   Query: 'نماز کی اہمیت'
+2025-12-08 23:29:13 - QuranSearch - INFO -   Top K: 5
+2025-12-08 23:29:13 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 23:29:13 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 23:29:13 - QuranSearch - INFO - Query: 'نماز کی اہمیت'
+2025-12-08 23:29:14 - QuranSearch - INFO - Colab response status: 404
+2025-12-08 23:29:14 - QuranSearch - ERROR - Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:29:14 - QuranSearch - ERROR - 🚨 Embedding service error: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:29:14 - QuranSearch - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/abdul/islamic_search/Quran_Clone_data/Quran_Hadit_Retrieval/backend/services/embedding_service.py", line 93, in get_embeddings_from_colab
+    raise Exception(error_msg)
+Exception: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+
+2025-12-08 23:29:14 - QuranSearch - INFO - Using fallback dummy embeddings
+2025-12-08 23:29:14 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 23:29:14 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=5 indices
+2025-12-08 23:29:14 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 23:29:15 - QuranSearch - INFO - Dense search returned 10 points
+2025-12-08 23:29:15 - QuranSearch - INFO - Searching sparse collection...
+2025-12-08 23:29:15 - QuranSearch - WARNING - Sparse search failed: Unsupported query type: <class 'dict'>
+2025-12-08 23:29:15 - QuranSearch - INFO - ✅ Found 5 combined results
+2025-12-08 23:29:15 - QuranSearch - INFO - ✅ Qdrant search successful, got 5 hits
+2025-12-08 23:29:15 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 23:29:15 - QuranSearch - INFO -   Verse 1: ID=3762, Quran_ID=3762
+2025-12-08 23:29:15 - QuranSearch - INFO -   Verse 2: ID=2583, Quran_ID=2583
+2025-12-08 23:29:15 - QuranSearch - INFO -   Verse 3: ID=273, Quran_ID=273
+2025-12-08 23:29:15 - QuranSearch - INFO -   Verse 4: ID=1895, Quran_ID=1895
+2025-12-08 23:29:15 - QuranSearch - INFO -   Verse 5: ID=3836, Quran_ID=3836
+2025-12-08 23:29:15 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 23:29:15 - QuranSearch - INFO - Fetching 5 verses from PostgreSQL
+2025-12-08 23:29:15 - QuranSearch - INFO - ✅ Retrieved 5 verses from PostgreSQL
+2025-12-08 23:29:15 - QuranSearch - INFO - ✅ Retrieved 5 verses from PostgreSQL
+2025-12-08 23:29:15 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 23:29:15 - QuranSearch - INFO -   Formatted result 1: Surah 36:57
+2025-12-08 23:29:15 - QuranSearch - INFO -   Formatted result 2: Surah 21:100
+2025-12-08 23:29:15 - QuranSearch - INFO -   Formatted result 3: Surah 2:266
+2025-12-08 23:29:15 - QuranSearch - INFO -   Formatted result 4: Surah 15:93
+2025-12-08 23:29:15 - QuranSearch - INFO -   Formatted result 5: Surah 37:48
+2025-12-08 23:29:15 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 23:29:15 - QuranSearch - INFO - 🤖 Getting detailed LLM explanation for 5 verses
+2025-12-08 23:29:15 - QuranSearch - INFO - 📝 Sending prompt to LLM (mistralai/Mistral-7B-Instruct-v0.1)...
+2025-12-08 23:29:15 - QuranSearch - ERROR - LLM attempt 1 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:29:18 - QuranSearch - ERROR - LLM attempt 2 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:29:22 - QuranSearch - ERROR - LLM attempt 3 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:29:22 - QuranSearch - ERROR - 🤖 LLM service error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:29:22 - QuranSearch - INFO - 📝 Using detailed fallback explanation
+2025-12-08 23:29:22 - QuranSearch - INFO - ✅ LLM explanation generated (1296 chars)
+2025-12-08 23:29:22 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 5 verses
+2025-12-08 23:29:55 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 23:29:55 - QuranSearch - INFO -   Query: 'نماز کی اہمیت'
+2025-12-08 23:29:55 - QuranSearch - INFO -   Top K: 3
+2025-12-08 23:29:55 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 23:29:55 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 23:29:55 - QuranSearch - INFO - Query: 'نماز کی اہمیت'
+2025-12-08 23:29:55 - QuranSearch - INFO - Colab response status: 404
+2025-12-08 23:29:55 - QuranSearch - ERROR - Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:29:55 - QuranSearch - ERROR - 🚨 Embedding service error: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:29:55 - QuranSearch - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/abdul/islamic_search/Quran_Clone_data/Quran_Hadit_Retrieval/backend/services/embedding_service.py", line 93, in get_embeddings_from_colab
+    raise Exception(error_msg)
+Exception: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+
+2025-12-08 23:29:55 - QuranSearch - INFO - Using fallback dummy embeddings
+2025-12-08 23:29:55 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 23:29:55 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=5 indices
+2025-12-08 23:29:55 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 23:29:55 - QuranSearch - INFO - Dense search returned 6 points
+2025-12-08 23:29:55 - QuranSearch - INFO - Searching sparse collection...
+2025-12-08 23:29:55 - QuranSearch - WARNING - Sparse search failed: Unsupported query type: <class 'dict'>
+2025-12-08 23:29:55 - QuranSearch - INFO - ✅ Found 3 combined results
+2025-12-08 23:29:55 - QuranSearch - INFO - ✅ Qdrant search successful, got 3 hits
+2025-12-08 23:29:55 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 23:29:55 - QuranSearch - INFO -   Verse 1: ID=3762, Quran_ID=3762
+2025-12-08 23:29:55 - QuranSearch - INFO -   Verse 2: ID=2583, Quran_ID=2583
+2025-12-08 23:29:55 - QuranSearch - INFO -   Verse 3: ID=273, Quran_ID=273
+2025-12-08 23:29:55 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 23:29:55 - QuranSearch - INFO - Fetching 3 verses from PostgreSQL
+2025-12-08 23:29:56 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 23:29:56 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 23:29:56 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 23:29:56 - QuranSearch - INFO -   Formatted result 1: Surah 36:57
+2025-12-08 23:29:56 - QuranSearch - INFO -   Formatted result 2: Surah 21:100
+2025-12-08 23:29:56 - QuranSearch - INFO -   Formatted result 3: Surah 2:266
+2025-12-08 23:29:56 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 23:29:56 - QuranSearch - INFO - 🤖 Getting detailed LLM explanation for 3 verses
+2025-12-08 23:29:56 - QuranSearch - INFO - 📝 Sending prompt to LLM (mistralai/Mistral-7B-Instruct-v0.1)...
+2025-12-08 23:29:56 - QuranSearch - ERROR - LLM attempt 1 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:29:59 - QuranSearch - ERROR - LLM attempt 2 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:30:03 - QuranSearch - ERROR - LLM attempt 3 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:30:03 - QuranSearch - ERROR - 🤖 LLM service error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:30:03 - QuranSearch - INFO - 📝 Using detailed fallback explanation
+2025-12-08 23:30:03 - QuranSearch - INFO - ✅ LLM explanation generated (1276 chars)
+2025-12-08 23:30:03 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 3 verses
+2025-12-08 23:32:10 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 23:32:10 - QuranSearch - INFO -   Query: 'نماز کی اہمیت'
+2025-12-08 23:32:10 - QuranSearch - INFO -   Top K: 3
+2025-12-08 23:32:10 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 23:32:10 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 23:32:10 - QuranSearch - INFO - Query: 'نماز کی اہمیت'
+2025-12-08 23:32:17 - QuranSearch - INFO - Colab response status: 404
+2025-12-08 23:32:17 - QuranSearch - ERROR - Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:32:17 - QuranSearch - ERROR - 🚨 Embedding service error: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:32:17 - QuranSearch - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/abdul/islamic_search/Quran_Clone_data/Quran_Hadit_Retrieval/backend/services/embedding_service.py", line 93, in get_embeddings_from_colab
+    raise Exception(error_msg)
+Exception: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+
+2025-12-08 23:32:17 - QuranSearch - INFO - Using fallback dummy embeddings
+2025-12-08 23:32:17 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 23:32:17 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=5 indices
+2025-12-08 23:32:17 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 23:32:17 - QuranSearch - INFO - Dense search returned 6 points
+2025-12-08 23:32:17 - QuranSearch - INFO - Searching sparse collection...
+2025-12-08 23:32:17 - QuranSearch - WARNING - Sparse search failed: Unsupported query type: <class 'dict'>
+2025-12-08 23:32:17 - QuranSearch - INFO - ✅ Found 3 combined results
+2025-12-08 23:32:17 - QuranSearch - INFO - ✅ Qdrant search successful, got 3 hits
+2025-12-08 23:32:17 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 23:32:17 - QuranSearch - INFO -   Verse 1: ID=3762, Quran_ID=3762
+2025-12-08 23:32:17 - QuranSearch - INFO -   Verse 2: ID=2583, Quran_ID=2583
+2025-12-08 23:32:17 - QuranSearch - INFO -   Verse 3: ID=273, Quran_ID=273
+2025-12-08 23:32:17 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 23:32:17 - QuranSearch - INFO - Fetching 3 verses from PostgreSQL
+2025-12-08 23:32:17 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 23:32:17 - QuranSearch - INFO - ✅ Retrieved 3 verses from PostgreSQL
+2025-12-08 23:32:17 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 23:32:17 - QuranSearch - INFO -   Formatted result 1: Surah 36:57
+2025-12-08 23:32:17 - QuranSearch - INFO -   Formatted result 2: Surah 21:100
+2025-12-08 23:32:17 - QuranSearch - INFO -   Formatted result 3: Surah 2:266
+2025-12-08 23:32:17 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 23:32:17 - QuranSearch - INFO - 🤖 Getting detailed LLM explanation for 3 verses
+2025-12-08 23:32:17 - QuranSearch - INFO - 📝 Sending prompt to LLM (mistralai/Mistral-7B-Instruct-v0.1)...
+2025-12-08 23:32:18 - QuranSearch - ERROR - LLM attempt 1 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:32:21 - QuranSearch - ERROR - LLM attempt 2 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:32:24 - QuranSearch - ERROR - LLM attempt 3 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:32:24 - QuranSearch - ERROR - 🤖 LLM service error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:32:24 - QuranSearch - INFO - 📝 Using detailed fallback explanation
+2025-12-08 23:32:24 - QuranSearch - INFO - ✅ LLM explanation generated (1276 chars)
+2025-12-08 23:32:24 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 3 verses
+2025-12-08 23:39:03 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 23:39:03 - QuranSearch - INFO -   Query: 'Namza'
+2025-12-08 23:39:03 - QuranSearch - INFO -   Top K: 5
+2025-12-08 23:39:03 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 23:39:03 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 23:39:03 - QuranSearch - INFO - Query: 'Namza'
+2025-12-08 23:39:04 - QuranSearch - INFO - Colab response status: 404
+2025-12-08 23:39:04 - QuranSearch - ERROR - Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:39:04 - QuranSearch - ERROR - 🚨 Embedding service error: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:39:04 - QuranSearch - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/abdul/islamic_search/Quran_Clone_data/Quran_Hadit_Retrieval/backend/services/embedding_service.py", line 93, in get_embeddings_from_colab
+    raise Exception(error_msg)
+Exception: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+
+2025-12-08 23:39:04 - QuranSearch - INFO - Using fallback dummy embeddings
+2025-12-08 23:39:04 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 23:39:04 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=5 indices
+2025-12-08 23:39:04 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 23:39:04 - QuranSearch - INFO - Dense search returned 10 points
+2025-12-08 23:39:04 - QuranSearch - INFO - Searching sparse collection...
+2025-12-08 23:39:04 - QuranSearch - WARNING - Sparse search failed: Unsupported query type: <class 'dict'>
+2025-12-08 23:39:04 - QuranSearch - INFO - ✅ Found 5 combined results
+2025-12-08 23:39:04 - QuranSearch - INFO - ✅ Qdrant search successful, got 5 hits
+2025-12-08 23:39:04 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 23:39:04 - QuranSearch - INFO -   Verse 1: ID=3762, Quran_ID=3762
+2025-12-08 23:39:04 - QuranSearch - INFO -   Verse 2: ID=2583, Quran_ID=2583
+2025-12-08 23:39:04 - QuranSearch - INFO -   Verse 3: ID=273, Quran_ID=273
+2025-12-08 23:39:04 - QuranSearch - INFO -   Verse 4: ID=1895, Quran_ID=1895
+2025-12-08 23:39:04 - QuranSearch - INFO -   Verse 5: ID=3836, Quran_ID=3836
+2025-12-08 23:39:04 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 23:39:04 - QuranSearch - INFO - Fetching 5 verses from PostgreSQL
+2025-12-08 23:39:04 - QuranSearch - INFO - ✅ Retrieved 5 verses from PostgreSQL
+2025-12-08 23:39:04 - QuranSearch - INFO - ✅ Retrieved 5 verses from PostgreSQL
+2025-12-08 23:39:04 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 23:39:04 - QuranSearch - INFO -   Formatted result 1: Surah 36:57
+2025-12-08 23:39:04 - QuranSearch - INFO -   Formatted result 2: Surah 21:100
+2025-12-08 23:39:04 - QuranSearch - INFO -   Formatted result 3: Surah 2:266
+2025-12-08 23:39:04 - QuranSearch - INFO -   Formatted result 4: Surah 15:93
+2025-12-08 23:39:04 - QuranSearch - INFO -   Formatted result 5: Surah 37:48
+2025-12-08 23:39:04 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 23:39:04 - QuranSearch - INFO - 🤖 Getting detailed LLM explanation for 5 verses
+2025-12-08 23:39:04 - QuranSearch - INFO - 📝 Sending prompt to LLM (mistralai/Mistral-7B-Instruct-v0.1)...
+2025-12-08 23:39:04 - QuranSearch - ERROR - LLM attempt 1 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:39:08 - QuranSearch - ERROR - LLM attempt 2 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:39:11 - QuranSearch - ERROR - LLM attempt 3 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:39:11 - QuranSearch - ERROR - 🤖 LLM service error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:39:11 - QuranSearch - INFO - 📝 Using detailed fallback explanation
+2025-12-08 23:39:11 - QuranSearch - INFO - ✅ LLM explanation generated (1288 chars)
+2025-12-08 23:39:11 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 5 verses
+2025-12-08 23:39:11 - QuranSearch - INFO - 🔍 HYBRID SEARCH REQUEST
+2025-12-08 23:39:11 - QuranSearch - INFO -   Query: 'Namaz'
+2025-12-08 23:39:11 - QuranSearch - INFO -   Top K: 5
+2025-12-08 23:39:11 - QuranSearch - INFO - 🚀 Step 1/5: Getting embeddings from Colab...
+2025-12-08 23:39:11 - QuranSearch - INFO - 📡 Calling Colab API: https://pseudoclerically-nonlisting-kimberley.ngrok-free.dev/embed
+2025-12-08 23:39:11 - QuranSearch - INFO - Query: 'Namaz'
+2025-12-08 23:39:11 - QuranSearch - INFO - Colab response status: 404
+2025-12-08 23:39:11 - QuranSearch - ERROR - Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:39:11 - QuranSearch - ERROR - 🚨 Embedding service error: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+2025-12-08 23:39:11 - QuranSearch - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/abdul/islamic_search/Quran_Clone_data/Quran_Hadit_Retrieval/backend/services/embedding_service.py", line 93, in get_embeddings_from_colab
+    raise Exception(error_msg)
+Exception: Colab API error 404: <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="
+
+2025-12-08 23:39:11 - QuranSearch - INFO - Using fallback dummy embeddings
+2025-12-08 23:39:11 - QuranSearch - INFO - 🚀 Step 2/5: Hybrid search in Qdrant...
+2025-12-08 23:39:11 - QuranSearch - INFO - 🔍 Hybrid search: dense=1024 dim, sparse=5 indices
+2025-12-08 23:39:11 - QuranSearch - INFO - Searching dense collection...
+2025-12-08 23:39:12 - QuranSearch - INFO - Dense search returned 10 points
+2025-12-08 23:39:12 - QuranSearch - INFO - Searching sparse collection...
+2025-12-08 23:39:12 - QuranSearch - WARNING - Sparse search failed: Unsupported query type: <class 'dict'>
+2025-12-08 23:39:12 - QuranSearch - INFO - ✅ Found 5 combined results
+2025-12-08 23:39:12 - QuranSearch - INFO - ✅ Qdrant search successful, got 5 hits
+2025-12-08 23:39:12 - QuranSearch - INFO - 🚀 Step 3/5: Extracting verse details...
+2025-12-08 23:39:12 - QuranSearch - INFO -   Verse 1: ID=3762, Quran_ID=3762
+2025-12-08 23:39:12 - QuranSearch - INFO -   Verse 2: ID=2583, Quran_ID=2583
+2025-12-08 23:39:12 - QuranSearch - INFO -   Verse 3: ID=273, Quran_ID=273
+2025-12-08 23:39:12 - QuranSearch - INFO -   Verse 4: ID=1895, Quran_ID=1895
+2025-12-08 23:39:12 - QuranSearch - INFO -   Verse 5: ID=3836, Quran_ID=3836
+2025-12-08 23:39:12 - QuranSearch - INFO - 🚀 Step 4/5: Fetching from PostgreSQL...
+2025-12-08 23:39:12 - QuranSearch - INFO - Fetching 5 verses from PostgreSQL
+2025-12-08 23:39:12 - QuranSearch - INFO - ✅ Retrieved 5 verses from PostgreSQL
+2025-12-08 23:39:12 - QuranSearch - INFO - ✅ Retrieved 5 verses from PostgreSQL
+2025-12-08 23:39:12 - QuranSearch - INFO - 🚀 Step 5/5: Formatting results...
+2025-12-08 23:39:12 - QuranSearch - INFO -   Formatted result 1: Surah 36:57
+2025-12-08 23:39:12 - QuranSearch - INFO -   Formatted result 2: Surah 21:100
+2025-12-08 23:39:12 - QuranSearch - INFO -   Formatted result 3: Surah 2:266
+2025-12-08 23:39:12 - QuranSearch - INFO -   Formatted result 4: Surah 15:93
+2025-12-08 23:39:12 - QuranSearch - INFO -   Formatted result 5: Surah 37:48
+2025-12-08 23:39:12 - QuranSearch - INFO - 🤖 Getting LLM explanation...
+2025-12-08 23:39:12 - QuranSearch - INFO - 🤖 Getting detailed LLM explanation for 5 verses
+2025-12-08 23:39:12 - QuranSearch - INFO - 📝 Sending prompt to LLM (mistralai/Mistral-7B-Instruct-v0.1)...
+2025-12-08 23:39:12 - QuranSearch - ERROR - LLM attempt 1 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:39:15 - QuranSearch - ERROR - LLM attempt 2 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:39:18 - QuranSearch - ERROR - LLM attempt 3 failed: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:39:18 - QuranSearch - ERROR - 🤖 LLM service error: Error code: 410 - {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2025-12-08 23:39:18 - QuranSearch - INFO - 📝 Using detailed fallback explanation
+2025-12-08 23:39:18 - QuranSearch - INFO - ✅ LLM explanation generated (1288 chars)
+2025-12-08 23:39:18 - QuranSearch - INFO - 🎉 SEARCH COMPLETE! Found 5 verses
