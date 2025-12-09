@@ -92,6 +92,7 @@ async def get_embeddings_from_colab(query: str):
                 logger.error(error_msg)
                 raise Exception(error_msg)
                 
+                
     except Exception as e:
         logger.error(f"🚨 Embedding service error: {str(e)}")
         logger.error(f"Traceback: {traceback.format_exc()}")
