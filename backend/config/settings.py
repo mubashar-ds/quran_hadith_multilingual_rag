@@ -16,6 +16,7 @@ POSTGRES_CONFIG = {
 
 # LLM Configuration (HuggingFace)
 HF_TOKEN = os.getenv("HF_TOKEN")
+
 LLM_MODEL = "mistralai/Mistral-7B-Instruct-v0.1"
 LLM_BASE_URL = "https://api-inference.huggingface.co/v1/"
 
