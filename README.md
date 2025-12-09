@@ -1,4 +1,4 @@
-# 🕌 Quran Search System - Hybrid Retrieval with LLM Explanations
+# Quran Search System - Hybrid Retrieval with LLM Explanations
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue)](https://python.org)  
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green)](https://fastapi.tiangolo.com)  
@@ -11,21 +11,21 @@ A production-ready Islamic search engine combining dense/sparse embeddings with 
 
 ---
 
-## ✨ Features
+## Features
 
-- **🔍 Hybrid Search:** Combines semantic (dense) and keyword (sparse) embeddings  
-- **🤖 Urdu LLM Explanations:** Detailed explanations in Urdu using open-source LLMs  
-- **📊 Multi-vector Storage:** Separate Qdrant collections for optimized retrieval  
-- **🌐 Ngrok Integration:** Easy external API access for Colab backend  
-- **⚡ FastAPI Backend:** High-performance REST API with async support  
-- **📈 Production Ready:** Comprehensive error handling, logging, and monitoring  
-- **🔄 Graceful Fallbacks:** System continues working even if components fail  
-- **🐘 PostgreSQL Integration:** Persistent verse storage and metadata management
-- **🚀 Docker Support:** Containerized deployment for easy scaling
+- **Hybrid Search:** Combines semantic (dense) and keyword (sparse) embeddings  
+- **Urdu LLM Explanations:** Detailed explanations in Urdu using open-source LLMs  
+- **Multi-vector Storage:** Separate Qdrant collections for optimized retrieval  
+- **Ngrok Integration:** Easy external API access for Colab backend  
+- **FastAPI Backend:** High-performance REST API with async support  
+- **Production Ready:** Comprehensive error handling, logging, and monitoring  
+- **Graceful Fallbacks:** System continues working even if components fail  
+- **PostgreSQL Integration:** Persistent verse storage and metadata management
+- **Docker Support:** Containerized deployment for easy scaling
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -53,9 +53,10 @@ A production-ready Islamic search engine combining dense/sparse embeddings with 
           └──────────────────────┘
 ```
 
+
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 quran_hadith_multilingual_rag/
@@ -100,23 +101,21 @@ quran_hadith_multilingual_rag/
     ├── API.md                          # API reference
     ├── SETUP.md                        # Detailed setup guide
     └── ARCHITECTURE.md                 # System architecture
-
 ```
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
-```bash
-✓ Python 3.9+
-✓ PostgreSQL 14+
-✓ Qdrant 1.9+ (or Docker)
-✓ Redis (optional, for caching)
-✓ Google Colab (for embeddings)
-✓ Git
-```
+- ✓ Python 3.9+
+- ✓ PostgreSQL 14+
+- ✓ Qdrant 1.9+ (or Docker)
+- ✓ Redis (optional, for caching)
+- ✓ Google Colab (for embeddings)
+- ✓ Git
+
 
 ### Installation
 
@@ -126,6 +125,7 @@ quran_hadith_multilingual_rag/
 git clone https://github.com/yourusername/quran-search-system.git
 cd quran-search-system
 ```
+
 
 **2. Backend Setup**
 
@@ -143,6 +143,7 @@ python scripts/setup_database.py
 python scripts/setup_qdrant.py
 ```
 
+
 **3. Start Services**
 
 ```bash
@@ -156,6 +157,7 @@ docker run -p 6333:6333 qdrant/qdrant
 python main.py
 ```
 
+
 **4. Access Frontend**
 
 Open `frontend/index.html` in your browser or:
@@ -165,11 +167,11 @@ Open `frontend/index.html` in your browser or:
 python -m http.server 8080 --directory frontend
 ```
 
-Visit: `http://localhost:8080`
+Visit: http://localhost:8080
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 ### Environment Variables (.env)
 
@@ -212,17 +214,17 @@ CACHE_TTL=3600
 
 ---
 
-## 🔌 API Endpoints
+## API Endpoints
 
 | Method | Endpoint                | Description                        |
 |--------|-------------------------|-----------------------------------|
-| POST   | `/search`               | Hybrid search with results         |
-| POST   | `/detailed-explanation` | Get Urdu explanation for verses    |
-| GET    | `/test-qdrant`          | Test Qdrant connection            |
-| GET    | `/test-postgres`        | Test PostgreSQL connection        |
-| GET    | `/test-colab`           | Test Colab embedding API          |
-| GET    | `/health`               | System health status              |
-| GET    | `/docs`                 | OpenAPI documentation (Swagger)   |
+| POST   | /search               | Hybrid search with results         |
+| POST   | /detailed-explanation | Get Urdu explanation for verses    |
+| GET    | /test-qdrant          | Test Qdrant connection            |
+| GET    | /test-postgres        | Test PostgreSQL connection        |
+| GET    | /test-colab           | Test Colab embedding API          |
+| GET    | /health               | System health status              |
+| GET    | /docs                 | OpenAPI documentation (Swagger)   |
 
 ### Search API Example
 
@@ -237,6 +239,7 @@ curl -X POST "http://localhost:8000/search" \
     "language": "urdu"
   }'
 ```
+
 
 **Response:**
 
@@ -265,7 +268,7 @@ curl -X POST "http://localhost:8000/search" \
 
 ---
 
-## 🧪 Testing
+## Testing
 
 **Connection Tests**
 
@@ -283,6 +286,7 @@ curl http://localhost:8000/test-postgres
 curl http://localhost:8000/test-colab
 ```
 
+
 **Integration Test**
 
 ```python
@@ -296,9 +300,10 @@ response = requests.post(
 print(json.dumps(response.json(), indent=2, ensure_ascii=False))
 ```
 
+
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### PostgreSQL Issues
 
@@ -313,6 +318,7 @@ psql -h localhost -U postgres -d quran_db -c "SELECT COUNT(*) FROM verses;"
 sudo tail -f /var/log/postgresql/postgresql.log
 ```
 
+
 ### Qdrant Issues
 
 ```bash
@@ -325,6 +331,7 @@ docker logs <container_id>
 # Restart
 docker restart <container_id>
 ```
+
 
 ### API Connection Issues
 
@@ -340,9 +347,10 @@ export LOG_LEVEL=DEBUG
 python backend/main.py
 ```
 
+
 ---
 
-## 🐳 Docker Deployment
+## Docker Deployment
 
 **Docker Compose (All Services)**
 
@@ -358,9 +366,10 @@ docker build -t quran-search-backend:latest .
 docker run -p 8000:8000 quran-search-backend:latest
 ```
 
+
 ---
 
-## 📚 Documentation
+## Documentation
 
 - **[Backend README](./backend/README.md)** - Detailed backend documentation
 - **[API Reference](./docs/API.md)** - Complete API documentation
@@ -369,7 +378,7 @@ docker run -p 8000:8000 quran-search-backend:latest
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create feature branch: `git checkout -b feature/AmazingFeature`
@@ -379,24 +388,24 @@ docker run -p 8000:8000 quran-search-backend:latest
 
 ---
 
-## 📄 License
+## License
 
 MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **FastAPI** - Modern async web framework
 - **Qdrant** - Vector database for semantic search
 - **PostgreSQL** - Reliable relational database
 - **Hugging Face** - Open-source LLM models
 - **Ngrok** - Secure tunneling service
+- **Raw Datasets** - https://github.com/risan/quran-json , https://tanzil.net/#1:1 , https://hadithapi.com/
 
-<div align="center">
+## Relevant Research Papers
+- https://arxiv.org/abs/2506.06339
+- https://aclanthology.org/2025.abjadnlp-1.16.pdf
+- https://doi.org/10.1109/ACCESS.2021.3126168
+- https://doi.org/10.14569/IJACSA.2025.01602134
 
-**Made with ❤️ for the Muslim Ummah**
-
-If you find this project helpful, please consider giving it a ⭐
-
-</div>
