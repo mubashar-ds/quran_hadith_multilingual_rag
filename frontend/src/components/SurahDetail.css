@@ -1,0 +1,79 @@
+.surah-detail-page {
+  position: fixed;
+  top: 84px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 24px 48px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.surah-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 110;
+  background: transparent;
+  padding-bottom: 8px;
+  justify-content: space-between;
+}
+
+.surah-back {
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.surah-detail-title {
+  font-family: 'Merriweather', serif;
+  color: #7a4f2a;
+  font-size: 28px;
+  margin: 0;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ayah-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.ayah-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.ayah-num {
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.ayah-ar {
+  font-size: 22px;
+  line-height: 1.6;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.ayah-en {
+  font-size: 14px;
+  color: #444;
+}

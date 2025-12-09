@@ -1,0 +1,139 @@
+.hadith-detail-page {
+  position: fixed;
+  top: 84px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 24px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: #f5f3ef;
+}
+
+.hadith-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 110;
+  background: linear-gradient(
+    180deg,
+    rgba(245, 243, 239, 0.96),
+    rgba(245, 243, 239, 0.75)
+  );
+  padding: 8px 0 10px 0;
+  backdrop-filter: blur(4px);
+}
+
+.hadith-back {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.hadith-detail-title {
+  font-family: 'Merriweather', serif;
+  color: #7a4f2a;
+  font-size: 28px;
+  margin: 0;
+  text-align: right;
+}
+
+.hadith-list {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 18px 0 40px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.hadith-detail-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px 32px 24px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e2e2;
+  width: 100%;
+  max-width: 1100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+}
+
+.hadith-num {
+  font-weight: 600;
+  color: #553f28;
+  font-size: 16px;
+  margin: 0 0 10px 0;
+}
+
+.hadith-ar {
+  font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade', serif;
+  font-size: clamp(20px, 1.6vw, 24px);
+  line-height: 2.1;
+  margin: 0 0 14px 0;
+  text-align: center;
+  color: #1a1a1a;
+  direction: rtl;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.hadith-en {
+  font-size: 15px;
+  color: #333333;
+  line-height: 1.75;
+  text-align: left;
+  margin: 0;
+  direction: ltr;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.hadith-narrator {
+  font-size: 12.5px;
+  color: #6b6864;
+  margin-top: 16px;
+  padding-top: 10px;
+  border-top: 1px dashed #e5e2dc;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+  .hadith-detail-page {
+    padding: 16px;
+  }
+
+  .hadith-detail-card {
+    padding: 18px 18px 22px;
+    border-radius: 16px;
+  }
+
+  .hadith-ar {
+    font-size: 19px;
+    line-height: 2.0;
+  }
+
+  .hadith-en {
+    font-size: 14.5px;
+    line-height: 1.8;
+  }
+}
+@media (max-width: 720px){
+  .hadith-detail-page{ padding:16px }
+  .hadith-detail-card{ padding:24px 28px }
+}@media (max-width: 720px){
+    .hadith-detail-page{ padding:16px }
+    .hadith-item-content{ padding:18px }
+    .hadith-item-title{ font-size:20px }
+}       
