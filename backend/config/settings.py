@@ -14,6 +14,7 @@ POSTGRES_CONFIG = {
     "password": "abd"
 }
 
+
 # LLM Configuration (HuggingFace)
 HF_TOKEN = os.getenv("HF_TOKEN")
 
