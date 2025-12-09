@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;600;700&display=swap');
+
+:root{
+  --bg: #f7f5f2;
+  --panel: #ffffff;
+  --accent: #2f6d67;
+  --muted: #7b8b88;
+  --text: #223635;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --accent: #4ea6a3;
+  --muted: #6b9c9c;
+}
